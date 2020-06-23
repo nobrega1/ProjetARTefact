@@ -27,6 +27,10 @@ module.exports = {
           loader: 'css-loader',
           options: {url: false} 
         }],        
+      },
+      {
+        test: /\.handlebars$/,
+        use: 'handlebars-loader'
       }  
     ]
   },
