@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateEditionTable extends Migration
+class CreateCatalogueTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,9 @@ class CreateEditionTable extends Migration
      */
     public function up()
     {
-        Schema::create('edition', function (Blueprint $table) {
-            $table->id('no');
-            $table->foreignId('eventno')->references('no')->on('event');
-            $table->string('place');
-            $table->timestamp('start');
-            $table->timestamp('end');
-
+        Schema::create('catalogue', function (Blueprint $table) {
+            $table->foreignId('editionno')->references('no')->on('edition');
+            $table->foreignId('productno')->references('no')->on('product');
         });
     }
 
@@ -30,6 +26,6 @@ class CreateEditionTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('edition');
+        Schema::dropIfExists('catalogue');
     }
 }
