@@ -18,7 +18,6 @@ class CreatePersonTable extends Migration
             $table->foreignId('adressno')->references('no')->on('address');
             $table->string('name');
             $table->string('firstname');
-            $table->string('name');
             $table->string('email')->unique();
             $table->string('password');
             $table->boolean('isactive')->default(false);
