@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateEditionTable extends Migration
+class CreateEmtbTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,9 @@ class CreateEditionTable extends Migration
      */
     public function up()
     {
-        Schema::create('edition', function (Blueprint $table) {
-            $table->id('no');
-            $table->foreignId('eventno')->references('no')->on('event');
-            $table->string('place');
-            $table->timestamp('start');
-            $table->timestamp('end');
+        Schema::create('emtb', function (Blueprint $table) {
+            $table->foreignId('mtbbikeno')->references('bikeno')->on('mtb');
+            $table->string('feature');
         });
     }
 
@@ -29,6 +26,6 @@ class CreateEditionTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('edition');
+        Schema::dropIfExists('emtb');
     }
 }
