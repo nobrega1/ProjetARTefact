@@ -14,11 +14,11 @@ class CreateEditionTable extends Migration
     public function up()
     {
         Schema::create('edition', function (Blueprint $table) {
-            $table->id('No');
-            $table->foreignId('event_No')->references('No')->on('event');
-            $table->string('Place');
-            $table->date('Start');
-            $table->date('End');
+            $table->id('no');
+            $table->foreignId('event_no')->references('no')->on('event');
+            $table->string('place');
+            $table->timestamp('start');
+            $table->timestamp('end');
 
         });
     }
