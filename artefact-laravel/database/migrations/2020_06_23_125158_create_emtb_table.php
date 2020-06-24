@@ -15,6 +15,7 @@ class CreateEmtbTable extends Migration
     {
         Schema::create('emtb', function (Blueprint $table) {
             $table->foreignId('mtbbikeno')->references('bikeno')->on('mtb');
+            $table->timestamps();
             $table->string('feature');
         });
     }

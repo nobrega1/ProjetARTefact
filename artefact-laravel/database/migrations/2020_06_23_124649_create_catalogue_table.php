@@ -14,6 +14,7 @@ class CreateCatalogueTable extends Migration
     public function up()
     {
         Schema::create('catalogue', function (Blueprint $table) {
+            $table->timestamps();
             $table->foreignId('editionno')->references('no')->on('edition');
             $table->foreignId('productno')->references('no')->on('product');
         });

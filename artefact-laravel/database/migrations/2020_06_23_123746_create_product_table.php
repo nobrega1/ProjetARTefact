@@ -15,6 +15,7 @@ class CreateProductTable extends Migration
     {
         Schema::create('product', function (Blueprint $table) {
             $table->id('no');
+            $table->timestamps();
             $table->foreignId('brandno')->references('no')->on('brand');
             $table->string('shortdescr');
             $table->text('longdescr')->nullable($value = true);

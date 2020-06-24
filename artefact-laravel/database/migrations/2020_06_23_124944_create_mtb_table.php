@@ -15,6 +15,7 @@ class CreateMtbTable extends Migration
     {
         Schema::create('mtb', function (Blueprint $table) {
             $table->foreignId('bikeno')->references('no')->on('bike');
+            $table->timestamps();
             $table->string('feature');
         });
     }

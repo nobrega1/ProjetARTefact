@@ -15,6 +15,7 @@ class CreateStaffTable extends Migration
     {
         Schema::create('staff', function (Blueprint $table) {
             $table->id('no');
+            $table->timestamps();
             $table->foreignId('personno')->references('no')->on('person');
         });
     }

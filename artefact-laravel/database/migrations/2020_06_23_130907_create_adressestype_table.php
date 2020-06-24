@@ -15,6 +15,7 @@ class CreateAdressestypeTable extends Migration
     {
         Schema::create('adressestype', function (Blueprint $table) {
             $table->id('no');
+            $table->timestamps();
             $table->foreignId('adressno')->references('no')->on('address');
             $table->text('description');
         });

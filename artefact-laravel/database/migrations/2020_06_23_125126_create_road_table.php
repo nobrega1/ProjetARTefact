@@ -15,6 +15,7 @@ class CreateRoadTable extends Migration
     {
         Schema::create('road', function (Blueprint $table) {
             $table->foreignId('bikeno')->references('no')->on('bike');
+            $table->timestamps();
             $table->string('feature');
         });
     }
