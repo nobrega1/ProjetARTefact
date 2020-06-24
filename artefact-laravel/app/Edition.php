@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Editon extends Model
+class Edition extends Model
 {
     protected $fillable = ['place','start','end'];
 
