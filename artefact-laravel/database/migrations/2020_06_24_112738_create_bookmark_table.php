@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateProductTable extends Migration
+class CreateBookmarkTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,10 @@ class CreateProductTable extends Migration
      */
     public function up()
     {
-        Schema::create('product', function (Blueprint $table) {
-            $table->id('no');
+        Schema::create('bookmark', function (Blueprint $table) {
+            $table->foreignId('productno')->references('no')->on('product');
+            $table->foreignId('clientno')->references('no')->on('client');
             $table->timestamps();
-            $table->foreignId('brandno')->references('no')->on('brand');
-            $table->string('shortdescr');
-            $table->text('longdescr')->nullable($value = true);
         });
     }
 
@@ -29,6 +27,6 @@ class CreateProductTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('product');
+        Schema::dropIfExists('bookmark');
     }
 }
