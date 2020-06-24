@@ -19,8 +19,6 @@ class CreateProductTable extends Migration
             $table->foreignId('brandno')->references('no')->on('brand');
             $table->string('shortdescr');
             $table->text('longdescr')->nullable($value = true);
-
-            $table->timestamps();
         });
     }
 
