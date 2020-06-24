@@ -74,7 +74,10 @@ class EditionController extends Controller
      */
     public function update(Request $request, Edition $edition)
     {
-        //
+        $data =$request->only(['place','start','end']);
+        //todo validation
+        $edition->update($data);
+        return new EditionResource($edition);
     }
 
     /**

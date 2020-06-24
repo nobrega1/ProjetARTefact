@@ -75,7 +75,10 @@ class EventController extends Controller
      */
     public function update(Request $request, Event $event)
     {
-        //
+        $data =$request->only(['name']);
+        //todo validation
+        $event->update($data);
+        return new EventResource($event);
     }
 
     /**
