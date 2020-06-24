@@ -18,8 +18,8 @@ class CreateTestTable extends Migration
             $table->foreignId('periodno')->references('no')->on('period');
             $table->foreignId('productno')->references('no')->on('product');
             $table->foreignId('clientno')->references('no')->on('client');
-            $table->timestamp('start');
-            $table->timestamp('end')->nullable($value = true);
+            $table->date('start');
+            $table->date('end')->nullable($value = true);
             $table->string('commentairestaff')->nullable($value = true);
             $table->integer('star')->nullable($value = true);
             $table->text('feedback')->nullable($value = true);
