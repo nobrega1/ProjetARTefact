@@ -6,11 +6,15 @@ use Illuminate\Database\Eloquent\Model;
 
 class Edition extends Model
 {
-    protected $fillable = ['place','start','end'];
     protected $table='edition';
+
+    protected $primaryKey = 'no';
+
+    protected $fillable = ['eventno','place','start','end'];
+
     public function event()
     {
-       return $this->belongsTo('App\event');
+       return $this->belongsTo('App\Event', 'eventno', 'no');
    }
-   protected $primaryKey = 'no';
+
 }
