@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class period extends Model
+class Period extends Model
 {
     //
 }

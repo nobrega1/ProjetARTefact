@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class editon extends Model
+class Editon extends Model
 {
     protected $fillable = ['place','start','end'];
 
@@ -12,4 +12,5 @@ class editon extends Model
     {
        return $this->belongsTo('App\event');
    }
+   protected $primaryKey = 'no';
 }

@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class ebike extends Model
+class Ebike extends Model
 {
     //
 }

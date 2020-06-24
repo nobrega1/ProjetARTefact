@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class event extends Model
+class Event extends Model
 {
     protected $fillable=['name'];
 
@@ -12,4 +12,6 @@ class event extends Model
      {
         return $this->hasMany('App\Edition');
     }
+    protected $primaryKey = 'no';
+
 }

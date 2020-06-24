@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class emtb extends Model
+class Emtb extends Model
 {
     //
 }
