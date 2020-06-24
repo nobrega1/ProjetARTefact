@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Event;
 use Illuminate\Http\Request;
+use App\Http\Resources\Event as EventResource;
 
 class EventController extends Controller
 {
@@ -14,7 +15,8 @@ class EventController extends Controller
      */
     public function index()
     {
-        //
+        return EventResource::collection(Event::all());
+
     }
 
     /**
@@ -24,7 +26,7 @@ class EventController extends Controller
      */
     public function create()
     {
-        //
+
     }
 
     /**
@@ -35,7 +37,10 @@ class EventController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data =$request->only(['name']);
+        //TODO validation
+        $event=Event::create($data);
+        return new EventResource($event);
     }
 
     /**
