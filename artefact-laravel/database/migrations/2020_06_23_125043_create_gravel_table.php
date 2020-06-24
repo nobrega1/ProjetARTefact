@@ -15,6 +15,7 @@ class CreateGravelTable extends Migration
     {
         Schema::create('gravel', function (Blueprint $table) {
             $table->foreignId('bikeno')->references('no')->on('bike');
+            $table->timestamps();
             $table->string('feature');
         });
     }

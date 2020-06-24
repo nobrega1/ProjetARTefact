@@ -16,6 +16,7 @@ class CreateJobTable extends Migration
         Schema::create('job', function (Blueprint $table) {
             $table->foreignId('editionno')->references('no')->on('edition');
             $table->foreignId('staffpersonno')->references('no')->on('staff');
+            $table->timestamps();
             $table->text('description');
         });
     }

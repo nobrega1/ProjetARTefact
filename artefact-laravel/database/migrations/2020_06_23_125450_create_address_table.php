@@ -15,6 +15,7 @@ class CreateAddressTable extends Migration
     {
         Schema::create('address', function (Blueprint $table) {
             $table->id('no');
+            $table->timestamps();
             $table->string('street')->nullable($value = true);
             $table->Integer('streetnumber')->nullable($value = true);
             $table->Integer('pobox')->nullable($value = true);
