@@ -45,7 +45,7 @@ class EditionController extends Controller
         return new EditionResource($edition);
     }   
         //
-    }
+    
 
 
     /**
