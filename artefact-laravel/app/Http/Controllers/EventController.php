@@ -51,7 +51,8 @@ class EventController extends Controller
      */
     public function show(Event $event)
     {
-        //
+        return new EventResource($event);
+
     }
 
     /**
@@ -85,6 +86,7 @@ class EventController extends Controller
      */
     public function destroy(Event $event)
     {
-        //
+        $event->delete();
+
     }
 }

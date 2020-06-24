@@ -51,7 +51,7 @@ class EditionController extends Controller
      */
     public function show(Edition $edition)
     {
-        //
+        return new EditionResource($edition);
     }
 
     /**
@@ -85,6 +85,6 @@ class EditionController extends Controller
      */
     public function destroy(Edition $edition)
     {
-        //
+        $editon->delete();
     }
 }
