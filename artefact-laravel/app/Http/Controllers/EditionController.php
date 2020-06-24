@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Edition;
 use Illuminate\Http\Request;
-
 use App\Http\Resources\Edition as EditionResource;
 
 
@@ -45,7 +44,7 @@ class EditionController extends Controller
         return new EditionResource($edition);
     }   
         //
-    }
+    
 
 
     /**
