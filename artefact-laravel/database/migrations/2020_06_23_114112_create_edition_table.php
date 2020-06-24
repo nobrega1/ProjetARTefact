@@ -17,8 +17,8 @@ class CreateEditionTable extends Migration
             $table->id('no');
             $table->foreignId('eventno')->references('no')->on('event');
             $table->string('place');
-            $table->timestamp('start');
-            $table->timestamp('end');
+            $table->date('start');
+            $table->date('end');
         });
     }
 

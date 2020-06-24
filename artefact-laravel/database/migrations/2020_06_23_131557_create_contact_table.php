@@ -16,8 +16,8 @@ class CreateContactTable extends Migration
         Schema::create('contact', function (Blueprint $table) {
             $table->foreignId('companyno')->references('no')->on('company');
             $table->foreignId('personno')->references('no')->on('person');
-            $table->timestamp('since');
-            $table->timestamp('until')->nullable($value = true);
+            $table->date('since');
+            $table->date('until')->nullable($value = true);
 
 
         });
