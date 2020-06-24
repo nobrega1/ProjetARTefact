@@ -14,6 +14,12 @@ class Edition extends JsonResource
      */
     public function toArray($request)
     {
-        return parent::toArray($request);
+        return[
+            'no'=>$this->no,
+            'eventno'=>$this->eventno,
+            'place'=>$this->place,
+            'start'=>$this->start,
+            'end'=>$this->end
+        ];
     }
 }

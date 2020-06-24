@@ -14,6 +14,10 @@ class Event extends JsonResource
      */
     public function toArray($request)
     {
-        return parent::toArray($request);
+        return[
+            'no'=>$this->no,
+            'name'=>$this->name,
+
+        ];
     }
 }
