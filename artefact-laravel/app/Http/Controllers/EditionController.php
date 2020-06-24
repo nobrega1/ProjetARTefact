@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Edition;
 use Illuminate\Http\Request;
+use App\Http\Resources\Edition as EditionResource;
 
 class EditionController extends Controller
 {
@@ -14,7 +15,8 @@ class EditionController extends Controller
      */
     public function index()
     {
-        //
+            return EditionResource::collection(Edition::all());
+        
     }
 
     /**
@@ -35,8 +37,11 @@ class EditionController extends Controller
      */
     public function store(Request $request)
     {
-        //
-    }
+        $data =$request->only(['place','start','end']);
+        //TODO validation
+        $edition=Edition::create($data);
+        return new EditionResource($edition);
+    }   
 
     /**
      * Display the specified resource.
