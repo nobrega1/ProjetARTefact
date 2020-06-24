@@ -15,6 +15,7 @@ class CreateEbikeTable extends Migration
     {
         Schema::create('ebike', function (Blueprint $table) {
             $table->foreignId('roadbikeno')->references('bikeno')->on('road');
+            $table->timestamps();
             $table->string('feature');
         });
     }

@@ -15,6 +15,7 @@ class CreateClientTable extends Migration
     {
         Schema::create('client', function (Blueprint $table) {
             $table->id('no');
+            $table->timestamps();
             $table->foreignId('personno')->references('no')->on('person');
         });
     }

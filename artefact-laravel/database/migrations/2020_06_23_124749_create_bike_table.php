@@ -15,6 +15,7 @@ class CreateBikeTable extends Migration
     {
         Schema::create('bike', function (Blueprint $table) {
             $table->id('no');
+            $table->timestamps();
             $table->foreignId('productno')->references('no')->on('product');
             $table->string('shortdescr');
             $table->integer('frameunit')->nullable($value = true);
