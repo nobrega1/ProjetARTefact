@@ -13,8 +13,13 @@ class Person extends Model
     protected $fillable = ['addressno','name','firstname','email','password','isactive','phonenumber'];
 
     public function address()
-    {
+    {           
        return $this->belongsTo('App\Address','no');
    }
+   
+   public function staffs()
+   {
+      return $this->hasOne('App\Staff');
+  }
 
 }
