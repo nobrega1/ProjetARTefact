@@ -2,12 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Edition;
+use App\Person;
 use Illuminate\Http\Request;
-use App\Http\Resources\Edition as EditionResource;
+use App\Http\Resources\Person as PersonResource;
 
-
-class EditionController extends Controller
+class PersonController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,7 +15,7 @@ class EditionController extends Controller
      */
     public function index()
     {
-            return EditionResource::collection(Edition::all());
+        return PersonResource::collection(Person::all());
     }
 
     /**
@@ -37,34 +36,30 @@ class EditionController extends Controller
      */
     public function store(Request $request)
     {
-        
-        $data =$request->only(['eventno','place','start','end']);
+        $data =$request->only(['addressno','name','firstname','email','password','isactive','phonenumber']);
         //TODO validation
-        $edition=Edition::create($data);
-        return new EditionResource($edition);
-    }   
-        //
-    
-
+        $person=Person::create($data);
+        return new PersonResource($person);
+    }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Edition  $edition
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Edition $edition)
+    public function show($id)
     {
-        return new EditionResource($edition);
+        return new PersonResource($edition);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Edition  $edition
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Edition $edition)
+    public function edit($id)
     {
         //
     }
@@ -73,26 +68,25 @@ class EditionController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Edition  $edition
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Edition $edition)
+    public function update(Request $request, $id)
     {
-
-        $data =$request->only(['eventno','place','start','end']);
-        //todo validation
-        $edition->update($data);
-        return new EditionResource($edition);
+        $data =$request->only(['addressno','name','firstname','email','password','isactive','phonenumber']);
+        //TODO validation
+        $person->uptade($data);
+        return new PersonResource($person);
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Edition  $edition
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Edition $edition)
+    public function destroy($id)
     {
-        $editon->delete();
+        $person->delete();
     }
 }
