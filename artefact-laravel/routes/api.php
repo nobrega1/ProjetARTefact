@@ -23,7 +23,7 @@ Route::apiResource('events','EventController');
 
 Route::apiResource('periods','PeriodController');
 Route::apiResource('tests','TestController');
-Route::apiResource('clients','TestController');
+Route::apiResource('clients','ClientController');
 Route::apiResource('addresses','AddressController');
 Route::apiResource('persons','PersonController');
 Route::apiResource('staffs','StaffController');
