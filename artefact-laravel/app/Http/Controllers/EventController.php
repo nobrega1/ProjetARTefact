@@ -41,7 +41,6 @@ class EventController extends Controller
      */
     public function store(Request $request)
     {
-
         $data =$request->only(['name']);
         //TODO validation
         $event=Event::create($data);
@@ -56,7 +55,8 @@ class EventController extends Controller
      */
     public function show(Event $event)
     {
-        //
+        return new EventResource($event);
+
     }
 
     /**
@@ -79,7 +79,10 @@ class EventController extends Controller
      */
     public function update(Request $request, Event $event)
     {
-        //
+        $data =$request->only(['name']);
+        //todo validation
+        $event->update($data);
+        return new EventResource($event);
     }
 
     /**
@@ -90,6 +93,7 @@ class EventController extends Controller
      */
     public function destroy(Event $event)
     {
-        //
+        $event->delete();
+
     }
 }

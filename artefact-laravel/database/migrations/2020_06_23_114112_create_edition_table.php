@@ -16,7 +16,12 @@ class CreateEditionTable extends Migration
         Schema::create('edition', function (Blueprint $table) {
             $table->id('no');
             $table->timestamps();
-            $table->foreignId('eventno')->references('no')->on('event');
+            //foreignkey
+            $table->biginteger('eventno')->unsigned();
+            $table->foreign('eventno')->references('no')->on('event')
+            ->onDelete('restrict')
+            ->onUpdate('restrict');
+
             $table->string('place');
             $table->date('start');
             $table->date('end');

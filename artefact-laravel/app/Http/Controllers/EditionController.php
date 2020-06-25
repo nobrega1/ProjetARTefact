@@ -37,8 +37,8 @@ class EditionController extends Controller
      */
     public function store(Request $request)
     {
-
-        $data =$request->only(['place','start','end']);
+        
+        $data =$request->only(['eventno','place','start','end']);
         //TODO validation
         $edition=Edition::create($data);
         return new EditionResource($edition);
@@ -55,7 +55,7 @@ class EditionController extends Controller
      */
     public function show(Edition $edition)
     {
-        //
+        return new EditionResource($edition);
     }
 
     /**
@@ -78,7 +78,11 @@ class EditionController extends Controller
      */
     public function update(Request $request, Edition $edition)
     {
-        //
+
+        $data =$request->only(['place','start','end']);
+        //todo validation
+        $edition->update($data);
+        return new EditionResource($edition);
     }
 
     /**
@@ -89,6 +93,6 @@ class EditionController extends Controller
      */
     public function destroy(Edition $edition)
     {
-        //
+        $editon->delete();
     }
 }
