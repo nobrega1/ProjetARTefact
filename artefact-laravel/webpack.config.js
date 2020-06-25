@@ -6,7 +6,7 @@ module.exports = {
   entry: ['babel-polyfill', './src/index.js'],
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, 'public')
   },
   watch: false,
   module: {
@@ -47,6 +47,9 @@ module.exports = {
     new webpack.ProvidePlugin({
       $: 'jquery',
       jQuery: 'jquery'
+    }),
+    new webpack.ProvidePlugin({
+      _: 'underscore'
     })
   ]
 };
