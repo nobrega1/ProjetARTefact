@@ -14,9 +14,15 @@ class CreatePeriodTable extends Migration
     public function up()
     {
         Schema::create('period', function (Blueprint $table) {
-            $table->id('No');
+            $table->id('no');
             $table->timestamps();
-            $table->foreignId('editionno')->references('no')->on('edition');
+            //foreignkey
+            $table->biginteger('editionno')->unsigned();
+            $table->foreign('editionno')
+                ->references('no')
+                ->on('edition')
+                ->onDelete('restrict')
+                ->onUpdate('restrict');
             $table->date('date');
             $table->date('start');
             $table->date('end');

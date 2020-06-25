@@ -2,13 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Edition;
+use App\Test;
 use Illuminate\Http\Request;
+use App\Http\Resources\Test as TestResource;
 
-use App\Http\Resources\Edition as EditionResource;
-
-
-class EditionController extends Controller
+class TestController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,7 +15,8 @@ class EditionController extends Controller
      */
     public function index()
     {
-            return EditionResource::collection(Edition::all());
+        return TestResource::collection(Test::all());
+
     }
 
     /**
@@ -38,34 +37,31 @@ class EditionController extends Controller
      */
     public function store(Request $request)
     {
-        
-        $data =$request->only(['eventno','place','start','end']);
+        $data =$request->only(['periodno','productno','clientno','start','end','commentstaff','stars','feedback']);
         //TODO validation
-        $edition=Edition::create($data);
-        return new EditionResource($edition);
-    }   
-        //
-    
-
+        $test=Test::create($data);
+        return new TestResource($test);
+    }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Edition  $edition
+     * @param  \App\Test  $test
      * @return \Illuminate\Http\Response
      */
-    public function show(Edition $edition)
+    public function show(Test $test)
     {
-        return new EditionResource($edition);
+        return new PeriodResource($test);
+
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Edition  $edition
+     * @param  \App\Test  $test
      * @return \Illuminate\Http\Response
      */
-    public function edit(Edition $edition)
+    public function edit(Test $test)
     {
         //
     }
@@ -74,26 +70,25 @@ class EditionController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Edition  $edition
+     * @param  \App\Test  $test
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Edition $edition)
+    public function update(Request $request, Test $test)
     {
-
-        $data =$request->only(['eventno','place','start','end']);
-        //todo validation
-        $edition->update($data);
-        return new EditionResource($edition);
+          //todo validation
+          $test->update($data);
+          return new TestResource($test);
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Edition  $edition
+     * @param  \App\Test  $test
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Edition $edition)
+    public function destroy(Test $test)
     {
-        $editon->delete();
+        $test->delete();
+
     }
 }
