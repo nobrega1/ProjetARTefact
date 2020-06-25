@@ -2,12 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Edition;
+use App\Client;
 use Illuminate\Http\Request;
-use App\Http\Resources\Edition as EditionResource;
+use App\Http\Resources\Client as ClientResource;
 
 
-class EditionController extends Controller
+class ClientController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,7 +16,8 @@ class EditionController extends Controller
      */
     public function index()
     {
-            return EditionResource::collection(Edition::all());
+        return ClientResource::collection(Client::all());
+
     }
 
     /**
@@ -37,34 +38,31 @@ class EditionController extends Controller
      */
     public function store(Request $request)
     {
-        
-        $data =$request->only(['eventno','place','start','end']);
+        $data =$request->only(['personno']);
         //TODO validation
-        $edition=Edition::create($data);
-        return new EditionResource($edition);
-    }   
-        //
-    
-
+        $client=Client::create($data);
+        return new ClientResource($client);
+    }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Edition  $edition
+     * @param  \App\Client  $client
      * @return \Illuminate\Http\Response
      */
-    public function show(Edition $edition)
+    public function show(Client $client)
     {
-        return new EditionResource($edition);
+        return new ClientResource($client);
+
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Edition  $edition
+     * @param  \App\Client  $client
      * @return \Illuminate\Http\Response
      */
-    public function edit(Edition $edition)
+    public function edit(Client $client)
     {
         //
     }
@@ -73,26 +71,25 @@ class EditionController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Edition  $edition
+     * @param  \App\Client  $client
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Edition $edition)
+    public function update(Request $request, Client $client)
     {
-
-        $data =$request->only(['eventno','place','start','end']);
+        $data =$request->only(['personno']);
         //todo validation
-        $edition->update($data);
-        return new EditionResource($edition);
+        $client->update($data);
+        return new EventResource($client);
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Edition  $edition
+     * @param  \App\Client  $client
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Edition $edition)
+    public function destroy(Client $client)
     {
-        $editon->delete();
+         $client->delete();
     }
 }

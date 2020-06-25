@@ -16,5 +16,9 @@ class Edition extends Model
     {
        return $this->belongsTo('App\Event','no');
    }
+   public function periods()
+   {
+      return $this->hasMany('App\Period');
+  }
 
 }

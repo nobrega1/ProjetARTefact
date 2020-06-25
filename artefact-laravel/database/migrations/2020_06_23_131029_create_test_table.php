@@ -16,9 +16,27 @@ class CreateTestTable extends Migration
         Schema::create('test', function (Blueprint $table) {
             $table->id('no');
             $table->timestamps();
-            $table->foreignId('periodno')->references('no')->on('period');
-            $table->foreignId('productno')->references('no')->on('product');
-            $table->foreignId('clientno')->references('no')->on('client');
+            //foreignkey product
+            $table->biginteger('productno')->unsigned();
+            $table->foreign('productno')
+                ->references('no')
+                ->on('product')
+                ->onDelete('restrict')
+                ->onUpdate('restrict');
+                //foreignkey period
+            $table->biginteger('periodno')->unsigned();
+            $table->foreign('periodno')
+                ->references('no')
+                ->on('period')
+                ->onDelete('restrict')
+                ->onUpdate('restrict');
+            //foreignkey client
+            $table->biginteger('clientno')->unsigned();
+            $table->foreign('clientno')
+                ->references('no')
+                ->on('client')
+                ->onDelete('restrict')
+                ->onUpdate('restrict');
             $table->date('start');
             $table->date('end')->nullable($value = true);
             $table->string('commentairestaff')->nullable($value = true);
