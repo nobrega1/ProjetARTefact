@@ -28,4 +28,9 @@ Route::apiResource('addresses','AddressController');
 Route::apiResource('persons','PersonController');
 Route::apiResource('staffs','StaffController');
 Route::apiResource('jobs','JobController');
+Route::apiResource('products','ProductController');
+Route::apiResource('companies','CompanyController');
+Route::apiResource('brands','BrandController');
+
+
 
