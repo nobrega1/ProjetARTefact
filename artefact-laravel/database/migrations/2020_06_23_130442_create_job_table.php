@@ -14,8 +14,14 @@ class CreateJobTable extends Migration
     public function up()
     {
         Schema::create('job', function (Blueprint $table) {
-            $table->foreignId('editionno')->references('no')->on('edition');
-            $table->foreignId('staffpersonno')->references('no')->on('staff');
+            $table->biginteger('editionno')->unsigned();
+            $table->foreign('editionno')->references('no')->on('edition')
+            ->onDelete('restrict')
+            ->onUpdate('restrict');
+            $table->biginteger('staffpersonno')->unsigned();
+            $table->foreign('staffpersonno')->references('no')->on('staff')
+            ->onDelete('restrict')
+            ->onUpdate('restrict');
             $table->timestamps();
             $table->text('description');
         });

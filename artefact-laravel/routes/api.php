@@ -26,4 +26,6 @@ Route::apiResource('tests','TestController');
 Route::apiResource('clients','TestController');
 Route::apiResource('addresses','AddressController');
 Route::apiResource('persons','PersonController');
+Route::apiResource('staffs','StaffController');
+Route::apiResource('jobs','JobController');
 

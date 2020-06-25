@@ -16,7 +16,10 @@ class CreateStaffTable extends Migration
         Schema::create('staff', function (Blueprint $table) {
             $table->id('no');
             $table->timestamps();
-            $table->foreignId('personno')->references('no')->on('person');
+            $table->biginteger('personno')->unsigned();
+            $table->foreign('personno')->references('no')->on('person')
+            ->onDelete('restrict')
+            ->onUpdate('restrict');
         });
     }
 
