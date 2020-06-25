@@ -37,7 +37,7 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        $data =$request->only(['brandno','shortdescr','longdescr','distinct',shortdescr',]);
+        $data =$request->only(['brandno','shortdescr','longdescr','distinctivesign','lienimage']);
         //TODO validation
         $client=Client::create($data);
         return new ClientResource($client);
