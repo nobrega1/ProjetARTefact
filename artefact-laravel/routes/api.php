@@ -20,8 +20,10 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 //Routes API
 Route::apiResource('editions','EditionController');
 Route::apiResource('events','EventController');
+
 Route::apiResource('periods','PeriodController');
 Route::apiResource('tests','TestController');
 Route::apiResource('clients','TestController');
-
+Route::apiResource('addresses','AddressController');
+Route::apiResource('persons','PersonController');
 
