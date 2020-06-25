@@ -22,4 +22,6 @@ Route::apiResource('editions','EditionController');
 Route::apiResource('events','EventController');
 Route::apiResource('periods','PeriodController');
 Route::apiResource('tests','TestController');
+Route::apiResource('clients','TestController');
+
 
