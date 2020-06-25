@@ -14,7 +14,7 @@ class Edition extends Model
 
     public function event()
     {
-       return $this->belongsTo('App\Event', 'eventno', 'no');
+       return $this->belongsTo('App\Event','no');
    }
 
 }

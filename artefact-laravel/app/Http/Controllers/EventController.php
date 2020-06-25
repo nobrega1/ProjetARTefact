@@ -41,7 +41,6 @@ class EventController extends Controller
      */
     public function store(Request $request)
     {
-
         $data =$request->only(['name']);
         //TODO validation
         $event=Event::create($data);

@@ -17,8 +17,10 @@ class CreateEditionTable extends Migration
             $table->id('no');
             $table->timestamps();
             //foreignkey
-            $table->biginteger('eventno')->unsigned()->nullable();
-            $table->foreign('eventno')->references('no')->on('event');
+            $table->biginteger('eventno')->unsigned();
+            $table->foreign('eventno')->references('no')->on('event')
+            ->onDelete('restrict')
+            ->onUpdate('restrict');
 
             $table->string('place');
             $table->date('start');
