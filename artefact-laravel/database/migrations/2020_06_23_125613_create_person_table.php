@@ -16,7 +16,10 @@ class CreatePersonTable extends Migration
         Schema::create('person', function (Blueprint $table) {
             $table->id('no');
             $table->timestamps();
-            $table->foreignId('adressno')->references('no')->on('address');
+            $table->biginteger('addressno')->unsigned();
+            $table->foreign('addressno')->references('no')->on('address')
+            ->onDelete('restrict')
+            ->onUpdate('restrict');
             $table->string('name');
             $table->string('firstname');
             $table->string('email')->unique();

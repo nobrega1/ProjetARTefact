@@ -19,3 +19,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 Route::apiResource('editions','EditionController');
 Route::apiResource('events','EventController');
+Route::apiResource('addresses','AddressController');
+Route::apiResource('persons','PersonController');
