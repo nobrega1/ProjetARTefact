@@ -16,4 +16,8 @@ class Period extends Model
     {
        return $this->belongsTo('App\Edition','no');
    }
+   public function tests()
+   {
+      return $this->hasMany('App\Test');
+  }
 }
