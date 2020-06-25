@@ -16,9 +16,20 @@ class CreateProductTable extends Migration
         Schema::create('product', function (Blueprint $table) {
             $table->id('no');
             $table->timestamps();
-            $table->foreignId('brandno')->references('no')->on('brand');
+             //foreignkey
+             $table->biginteger('brandno')->unsigned();
+             $table->foreign('brandno')
+                 ->references('no')
+                 ->on('brand')
+                 ->onDelete('restrict')
+                 ->onUpdate('restrict');
             $table->string('shortdescr');
             $table->text('longdescr')->nullable($value = true);
+            $table->string('distinctivesign')->nullable($value = true);
+            $table->string('lienimage')->nullable($value = true);
+
+            
+
         });
     }
 
