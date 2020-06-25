@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Job;
+use App\adressestype;
 use Illuminate\Http\Request;
-use App\Http\Resources\Job as JobResource;
+use App\Http\Resources\AdressetypeResource as AdressetypeResource;
 
-class JobController extends Controller
+class AdressetypeController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +15,7 @@ class JobController extends Controller
      */
     public function index()
     {
-        return JobResource::collection(Job::all());
+        return AdressetypeResource::collection(Adressestype::all());
     }
 
     /**
@@ -36,10 +36,10 @@ class JobController extends Controller
      */
     public function store(Request $request)
     {
-        $data =$request->only(['staffpersonno','editionno','description']);
+        $data =$request->only(['addressno','description']);
         //TODO validation
-        $job=Job::create($data);
-        return new JobResource($job);
+        $adressetype=Adressestype::create($data);
+        return new AdressetypeResource($adressetype);
     }
 
     /**
@@ -50,7 +50,7 @@ class JobController extends Controller
      */
     public function show($id)
     {
-        return new JobResource($job);
+        return new AdressetypeResource($adressetype);
     }
 
     /**
@@ -73,11 +73,10 @@ class JobController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $data =$request->only(['staffpersonno','editionno']);
+        $data =$request->only(['addressno','description']);
         //TODO validation
-        $job->update($data);
-        return new JobResource($job);
-    }
+        $adressetype->update($data);
+        return new AdressetypeResource($adressetype);    }
 
     /**
      * Remove the specified resource from storage.
@@ -87,6 +86,6 @@ class JobController extends Controller
      */
     public function destroy($id)
     {
-        $job->delete();
+        $adressetype->delete();
     }
 }

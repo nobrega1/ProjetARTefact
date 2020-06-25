@@ -21,7 +21,6 @@ class CreateEditionTable extends Migration
             $table->foreign('eventno')->references('no')->on('event')
             ->onDelete('restrict')
             ->onUpdate('restrict');
-
             $table->string('place');
             $table->date('start');
             $table->date('end');
