@@ -29,3 +29,5 @@ Route::apiResource('persons','PersonController');
 Route::apiResource('staffs','StaffController');
 Route::apiResource('jobs','JobController');
 Route::apiResource('adressetypes','AdressetypeController');
+Route::apiResource('catalogues','CatalogueController');
+Route::apiResource('bookmarks','BookmarkController');

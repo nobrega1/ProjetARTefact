@@ -15,8 +15,18 @@ class CreateCatalogueTable extends Migration
     {
         Schema::create('catalogue', function (Blueprint $table) {
             $table->timestamps();
-            $table->foreignId('editionno')->references('no')->on('edition');
-            $table->foreignId('productno')->references('no')->on('product');
+            $table->biginteger('editionno')->unsigned();
+            $table->foreign('editionno')
+                ->references('no')
+                ->on('edition')
+                ->onDelete('restrict')
+                ->onUpdate('restrict');
+            $table->biginteger('productno')->unsigned();
+            $table->foreign('productno')
+                ->references('no')
+                ->on('product')
+                ->onDelete('restrict')
+                ->onUpdate('restrict');
         });
     }
 
