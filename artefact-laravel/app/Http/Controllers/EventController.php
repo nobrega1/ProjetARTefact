@@ -40,7 +40,11 @@ class EventController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
+
     {
+        $validatedData = $request->validate([
+            'name' => 'required|unique:event|max:25',
+        ]);
         $data =$request->only(['name']);
         //TODO validation
         $event=Event::create($data);
@@ -79,6 +83,9 @@ class EventController extends Controller
      */
     public function update(Request $request, Event $event)
     {
+        $validatedData = $request->validate([
+            'name' => 'required|unique:event|max:25',
+        ]);
         $data =$request->only(['name']);
         //todo validation
         $event->update($data);
