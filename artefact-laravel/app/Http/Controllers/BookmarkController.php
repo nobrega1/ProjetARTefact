@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Job;
+use App\Bookmark;
 use Illuminate\Http\Request;
-use App\Http\Resources\Job as JobResource;
+use App\Http\Resources\Bookmark as BookmarkResource;
 
-class JobController extends Controller
+class BookmarkController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +15,7 @@ class JobController extends Controller
      */
     public function index()
     {
-        return JobResource::collection(Job::all());
+        return BookmarkResource::collection(Bookmark::all());
     }
 
     /**
@@ -36,30 +36,30 @@ class JobController extends Controller
      */
     public function store(Request $request)
     {
-        $data =$request->only(['staffpersonno','editionno','description']);
+        $data =$request->only(['clientno','personno']);
         //TODO validation
-        $job=Job::create($data);
-        return new JobResource($job);
+        $bookmark=Bookmark::create($data);
+        return new BookmarkResource($bookmark);
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Bookmark  $bookmark
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Bookmark $bookmark)
     {
-        return new JobResource($job);
+        return new BookmarkResource($bookmark);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Bookmark  $bookmark
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Bookmark $bookmark)
     {
         //
     }
@@ -68,25 +68,25 @@ class JobController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\Bookmark  $bookmark
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Bookmark $bookmark)
     {
-        $data =$request->only(['staffpersonno','editionno']);
+        $data =$request->only(['clientno','personno']);
         //TODO validation
-        $job->update($data);
-        return new JobResource($job);
+        $bookmark->update($data);
+        return new BookmarkResource($bookmark);
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Bookmark  $bookmark
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Bookmark $bookmark)
     {
-        $job->delete();
+        $catalogue->delete();
     }
 }

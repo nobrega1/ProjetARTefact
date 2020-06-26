@@ -70,7 +70,7 @@ class PeriodController extends Controller
      */
     public function destroy($id)
     {
-        $editon->delete();
+        $period->delete();
 
     }
 }

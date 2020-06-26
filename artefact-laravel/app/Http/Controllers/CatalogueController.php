@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Job;
+use App\Catalogue;
 use Illuminate\Http\Request;
-use App\Http\Resources\Job as JobResource;
+use App\Http\Resources\Catalogue as CatalogueResource;
 
-class JobController extends Controller
+class CatalogueController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +15,7 @@ class JobController extends Controller
      */
     public function index()
     {
-        return JobResource::collection(Job::all());
+        return CatalogueResource::collection(Catalogue::all());
     }
 
     /**
@@ -36,30 +36,30 @@ class JobController extends Controller
      */
     public function store(Request $request)
     {
-        $data =$request->only(['staffpersonno','editionno','description']);
+        $data =$request->only(['editionno','personno']);
         //TODO validation
-        $job=Job::create($data);
-        return new JobResource($job);
+        $catalogue=Catalogue::create($data);
+        return new CatalogueResource($catalogue);
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Catalogue  $catalogue
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Catalogue $catalogue)
     {
-        return new JobResource($job);
+        return new CatalogueResource($catalogue);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Catalogue  $catalogue
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Catalogue $catalogue)
     {
         //
     }
@@ -68,25 +68,25 @@ class JobController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\Catalogue  $catalogue
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Catalogue $catalogue)
     {
-        $data =$request->only(['staffpersonno','editionno']);
+        $data =$request->only(['editionno','personno']);
         //TODO validation
-        $job->update($data);
-        return new JobResource($job);
+        $catalogue->update($data);
+        return new CatalogueResource($catalogue);
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Catalogue  $catalogue
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Catalogue $catalogue)
     {
-        $job->delete();
+        $catalogue->delete();
     }
 }

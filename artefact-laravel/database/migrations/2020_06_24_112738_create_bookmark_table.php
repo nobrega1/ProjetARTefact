@@ -14,8 +14,18 @@ class CreateBookmarkTable extends Migration
     public function up()
     {
         Schema::create('bookmark', function (Blueprint $table) {
-            $table->foreignId('productno')->references('no')->on('product');
-            $table->foreignId('clientno')->references('no')->on('client');
+            $table->biginteger('clientno')->unsigned();
+            $table->foreign('clientno')
+                ->references('no')
+                ->on('client')
+                ->onDelete('restrict')
+                ->onUpdate('restrict');
+            $table->biginteger('productno')->unsigned();
+            $table->foreign('productno')
+                ->references('no')
+                ->on('product')
+                ->onDelete('restrict')
+                ->onUpdate('restrict');
             $table->timestamps();
         });
     }

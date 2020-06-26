@@ -16,5 +16,9 @@ class Address extends Model
     {
        return $this->hasMany('App\Person','no');
    }
+   public function adressestypes()
+   {
+      return $this->belongsTo('App\Adressestype','no');
+  }
 
 }
