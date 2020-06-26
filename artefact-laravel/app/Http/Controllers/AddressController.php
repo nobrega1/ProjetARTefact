@@ -50,7 +50,7 @@ class AddressController extends Controller
      */
     public function show($id)
     {
-        return new AddressResource($edition);
+        return new AddressResource($bike);
     }
 
     /**

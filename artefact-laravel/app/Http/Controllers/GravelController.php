@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Product;
+use App\Gravel;
 use Illuminate\Http\Request;
-use App\Http\Resources\Product as ProductResource;
+use App\Http\Resources\Gravel as GravelResource;
 
-class ProductController extends Controller
+class GravelController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +15,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        return ProductResource::collection(Product::all());
+        return GravelResource::collection(Gravel::all());
 
     }
 
@@ -37,31 +37,30 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        $data =$request->only(['brandno','shortdescr','longdescr','distinctivesign','lienimage']);
+        $data =$request->only(['bikeno,feature']);
         //TODO validation
-        $product=Product::create($data);
-        return new ProductResource($product);
+        $gravel=Gravel::create($data);
+        return new GravelResource($gravel);
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Product  $product
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Product $product)
+    public function show($id)
     {
-        return new ProductResource($product);
-
+        return new GravelResource($bike);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Product  $product
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Product $product)
+    public function edit($id)
     {
         //
     }
@@ -70,22 +69,26 @@ class ProductController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Product  $product
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Product $product)
+    public function update(Request $request, $id)
     {
-        //
+        $data =$request->only(['bikeno,feature']);
+        //TODO validation
+        $gravel->update($data);
+        return new GravelResource($gravel);
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Product  $product
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Product $product)
+    public function destroy($id)
     {
-        $product->delete();
+        $gravel->delete();
+
     }
 }

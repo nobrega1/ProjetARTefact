@@ -16,8 +16,13 @@ class CreateBikeTable extends Migration
         Schema::create('bike', function (Blueprint $table) {
             $table->id('no');
             $table->timestamps();
-            $table->foreignId('productno')->references('no')->on('product');
-            $table->string('shortdescr');
+            //foreignkey
+            $table->biginteger('productno')->unsigned();
+            $table->foreign('productno')
+                ->references('no')
+                ->on('product')
+                ->onDelete('restrict')
+                ->onUpdate('restrict');
             $table->integer('frameunit')->nullable($value = true);
             $table->integer('framesize')->nullable($value = true);
             $table->integer('rimsize')->nullable($value = true);

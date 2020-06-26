@@ -2,11 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Product;
 use Illuminate\Http\Request;
-use App\Http\Resources\Product as ProductResource;
+use App\bike;
+use App\Http\Resources\Road as RoadResource;
 
-class ProductController extends Controller
+
+class RoadController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +16,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        return ProductResource::collection(Product::all());
+        return RoadResource::collection(Road::all());
 
     }
 
@@ -37,31 +38,30 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        $data =$request->only(['brandno','shortdescr','longdescr','distinctivesign','lienimage']);
+        $data =$request->only(['bikeno','feature']);
         //TODO validation
-        $product=Product::create($data);
-        return new ProductResource($product);
+        $road=Road::create($data);
+        return new RoadResource($road);
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Product  $product
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Product $product)
+    public function show($id)
     {
-        return new ProductResource($product);
-
+        //
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Product  $product
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Product $product)
+    public function edit($id)
     {
         //
     }
@@ -70,22 +70,26 @@ class ProductController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Product  $product
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Product $product)
+    public function update(Request $request, $id)
     {
-        //
+        $data =$request->only(['bikeno,feature']);
+        //TODO validation
+        $road->update($data);
+        return new RoadResource($road);
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Product  $product
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Product $product)
+    public function destroy($id)
     {
-        $product->delete();
+        $road->delete();
+
     }
 }

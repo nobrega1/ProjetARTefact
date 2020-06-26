@@ -2,11 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Product;
+use App\Company;
 use Illuminate\Http\Request;
-use App\Http\Resources\Product as ProductResource;
+use App\Http\Resources\Company as CompanyResource;
 
-class ProductController extends Controller
+
+class CompanyController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +16,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        return ProductResource::collection(Product::all());
+        return CompanyResource::collection(Company::all());
 
     }
 
@@ -37,31 +38,31 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        $data =$request->only(['brandno','shortdescr','longdescr','distinctivesign','lienimage']);
+        $data =$request->only(['corporatename']);
         //TODO validation
-        $product=Product::create($data);
-        return new ProductResource($product);
+        $company=Company::create($data);
+        return new CompanyResource($company);
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Product  $product
+     * @param  \App\Company  $company
      * @return \Illuminate\Http\Response
      */
-    public function show(Product $product)
+    public function show(Company $company)
     {
-        return new ProductResource($product);
+        return new CompanyResource($company);
 
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Product  $product
+     * @param  \App\Company  $company
      * @return \Illuminate\Http\Response
      */
-    public function edit(Product $product)
+    public function edit(Company $company)
     {
         //
     }
@@ -70,22 +71,26 @@ class ProductController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Product  $product
+     * @param  \App\Company  $company
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Product $product)
+    public function update(Request $request, Company $company)
     {
-        //
+        $data =$request->only(['corporatename']);
+        //TODO validation
+        $company->update($data);
+        return new CompanyResource($company);
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Product  $product
+     * @param  \App\Company  $company
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Product $product)
+    public function destroy(Company $company)
     {
-        $product->delete();
+        $company->delete();
+
     }
 }

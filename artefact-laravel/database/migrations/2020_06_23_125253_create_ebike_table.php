@@ -14,8 +14,12 @@ class CreateEbikeTable extends Migration
     public function up()
     {
         Schema::create('ebike', function (Blueprint $table) {
-            $table->foreignId('roadbikeno')->references('bikeno')->on('road');
-            $table->timestamps();
+            $table->biginteger('roadbikeno')->unsigned();
+            $table->foreign('roadbikeno')
+                ->references('bikeno')
+                ->on('road')
+                ->onDelete('restrict')
+                ->onUpdate('restrict');            $table->timestamps();
             $table->string('feature');
         });
     }

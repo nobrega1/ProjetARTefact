@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Product;
 use Illuminate\Http\Request;
-use App\Http\Resources\Product as ProductResource;
+use App\Bike;
 
-class ProductController extends Controller
+use App\Http\Resources\Bike as BikeResource;
+
+
+class BikeController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +17,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        return ProductResource::collection(Product::all());
+        return BikeResource::collection(Bike::all());
 
     }
 
@@ -37,31 +39,31 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        $data =$request->only(['brandno','shortdescr','longdescr','distinctivesign','lienimage']);
+        $data =$request->only(['productno','frameunit','framesize','rimsize','rimunit']);
         //TODO validation
-        $product=Product::create($data);
-        return new ProductResource($product);
+        $bike=Bike::create($data);
+        return new BikeResource($bike);
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Product  $product
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Product $product)
+    public function show($id)
     {
-        return new ProductResource($product);
+        return new BikeResource($bike);
 
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Product  $product
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Product $product)
+    public function edit($id)
     {
         //
     }
@@ -70,22 +72,27 @@ class ProductController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Product  $product
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Product $product)
+    public function update(Request $request, $id)
     {
-        //
+        $data =$request->only(['street','streetnumber','pobox','postalcode','city','canton','country']);
+        //TODO validation
+        $bike->update($data);
+        return new BikeResource($bike);
+
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Product  $product
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Product $product)
+    public function destroy($id)
     {
-        $product->delete();
+        $bike->delete();
+
     }
 }
