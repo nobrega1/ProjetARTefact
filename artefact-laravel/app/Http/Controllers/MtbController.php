@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\bike;
+use App\Http\Resources\Mtb as MtbResource;
+
 
 class MtbController extends Controller
 {
@@ -13,7 +16,8 @@ class MtbController extends Controller
      */
     public function index()
     {
-        //
+        return MtbResource::collection(Mtb::all());
+
     }
 
     /**
@@ -34,7 +38,10 @@ class MtbController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data =$request->only(['bikeno','feature']);
+        //TODO validation
+        $mtb=Mtb::create($data);
+        return new MtbResource($mtb);
     }
 
     /**
