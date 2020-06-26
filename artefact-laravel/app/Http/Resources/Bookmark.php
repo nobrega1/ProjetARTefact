@@ -16,7 +16,7 @@ class Bookmark extends JsonResource
     {
         return[
             'clientno'=>$this->clientno,
-            'personno'=>$this->personno
+            'productno'=>$this->productno
         ];
     }
 }
