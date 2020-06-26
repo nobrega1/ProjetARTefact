@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Address;
 use Illuminate\Http\Request;
-use App\Http\Resources\Address as AddressResource;
+use App\bike;
 
-class AddressController extends Controller
+use App\Http\Resources\Bike as BikeResource;
+
+
+class BikeController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +17,8 @@ class AddressController extends Controller
      */
     public function index()
     {
-        return AddressResource::collection(Address::all());
+        return BikeResource::collection(Bike::all());
+
     }
 
     /**
@@ -36,10 +39,10 @@ class AddressController extends Controller
      */
     public function store(Request $request)
     {
-        $data =$request->only(['street','streetnumber','pobox','postalcode','city','canton','country']);
+        $data =$request->only(['productno','frameunit','framesize','rimsize','rimunit']);
         //TODO validation
-        $address=Address::create($data);
-        return new AddressResource($address);
+        $bike=Bike::create($data);
+        return new BikeResource($bike);
     }
 
     /**
@@ -50,7 +53,8 @@ class AddressController extends Controller
      */
     public function show($id)
     {
-        return new AddressResource($bike);
+        return new BikeResource($bike);
+
     }
 
     /**
@@ -75,8 +79,9 @@ class AddressController extends Controller
     {
         $data =$request->only(['street','streetnumber','pobox','postalcode','city','canton','country']);
         //TODO validation
-        $address->update($data);
-        return new AddressResource($address);
+        $bike->update($data);
+        return new BikeResource($bike);
+
     }
 
     /**
@@ -87,6 +92,7 @@ class AddressController extends Controller
      */
     public function destroy($id)
     {
-        $address->delete();
+        $bike->delete();
+
     }
 }

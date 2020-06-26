@@ -31,6 +31,8 @@ Route::apiResource('jobs','JobController');
 Route::apiResource('products','ProductController');
 Route::apiResource('companies','CompanyController');
 Route::apiResource('brands','BrandController');
+Route::apiResource('bikes','BikeController');
+
 
 
 
