@@ -32,6 +32,11 @@ Route::apiResource('products','ProductController');
 Route::apiResource('companies','CompanyController');
 Route::apiResource('brands','BrandController');
 Route::apiResource('bikes','BikeController');
+Route::apiResource('mtbs','MtbController');
+Route::apiResource('emtbs','EmtbController');
+Route::apiResource('gravels','GravelController');
+Route::apiResource('roads','RoadController');
+Route::apiResource('ebikes','EbikeController');
 
 
 

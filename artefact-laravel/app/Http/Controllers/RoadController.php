@@ -3,11 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Gravel;
-use App\Http\Resources\Mtb as MtbResource;
+use App\bike;
+use App\Http\Resources\Road as RoadResource;
 
 
-class MtbController extends Controller
+class RoadController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,7 +16,7 @@ class MtbController extends Controller
      */
     public function index()
     {
-        return MtbResource::collection(Mtb::all());
+        return RoadResource::collection(Road::all());
 
     }
 
@@ -40,8 +40,8 @@ class MtbController extends Controller
     {
         $data =$request->only(['bikeno','feature']);
         //TODO validation
-        $mtb=Mtb::create($data);
-        return new MtbResource($mtb);
+        $road=Road::create($data);
+        return new RoadResource($road);
     }
 
     /**
@@ -77,8 +77,8 @@ class MtbController extends Controller
     {
         $data =$request->only(['bikeno,feature']);
         //TODO validation
-        $mtb->update($data);
-        return new MtbResource($mtb);
+        $road->update($data);
+        return new RoadResource($road);
     }
 
     /**
@@ -89,7 +89,7 @@ class MtbController extends Controller
      */
     public function destroy($id)
     {
-        $mtb->delete();
+        $road->delete();
 
     }
 }

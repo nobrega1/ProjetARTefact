@@ -2,12 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Ebike;
 use Illuminate\Http\Request;
-use App\Gravel;
-use App\Http\Resources\Mtb as MtbResource;
+use App\Http\Resources\Ebike as EbikeResource;
 
-
-class MtbController extends Controller
+class EbikeController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,7 +15,7 @@ class MtbController extends Controller
      */
     public function index()
     {
-        return MtbResource::collection(Mtb::all());
+        return EbikeResource::collection(Ebike::all());
 
     }
 
@@ -38,10 +37,10 @@ class MtbController extends Controller
      */
     public function store(Request $request)
     {
-        $data =$request->only(['bikeno','feature']);
+        $data =$request->only(['mtbbikeno,feature']);
         //TODO validation
-        $mtb=Mtb::create($data);
-        return new MtbResource($mtb);
+        $ebike=Ebike::create($data);
+        return new EbikeResource($ebike);
     }
 
     /**
@@ -52,7 +51,7 @@ class MtbController extends Controller
      */
     public function show($id)
     {
-        //
+        return new EbikeResource($bike);
     }
 
     /**
@@ -75,10 +74,10 @@ class MtbController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $data =$request->only(['bikeno,feature']);
+        $data =$request->only(['mtbbikeno,feature']);
         //TODO validation
-        $mtb->update($data);
-        return new MtbResource($mtb);
+        $ebike->update($data);
+        return new EbikeResource($ebike);
     }
 
     /**
@@ -89,7 +88,7 @@ class MtbController extends Controller
      */
     public function destroy($id)
     {
-        $mtb->delete();
+        $ebike->delete();
 
     }
 }
