@@ -14,8 +14,13 @@ class CreateGravelTable extends Migration
     public function up()
     {
         Schema::create('gravel', function (Blueprint $table) {
-            $table->foreignId('bikeno')->references('no')->on('bike');
-            $table->timestamps();
+   //foreignkey
+   $table->biginteger('bikeno')->unsigned();
+   $table->foreign('bikeno')
+       ->references('no')
+       ->on('bike')
+       ->onDelete('restrict')
+       ->onUpdate('restrict');            $table->timestamps();
             $table->string('feature');
         });
     }
