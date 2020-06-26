@@ -36,7 +36,7 @@ class BookmarkController extends Controller
      */
     public function store(Request $request)
     {
-        $data =$request->only(['clientno','personno']);
+        $data =$request->only(['clientno','productno']);
         //TODO validation
         $bookmark=Bookmark::create($data);
         return new BookmarkResource($bookmark);
@@ -73,7 +73,7 @@ class BookmarkController extends Controller
      */
     public function update(Request $request, Bookmark $bookmark)
     {
-        $data =$request->only(['clientno','personno']);
+        $data =$request->only(['clientno','productno']);
         //TODO validation
         $bookmark->update($data);
         return new BookmarkResource($bookmark);

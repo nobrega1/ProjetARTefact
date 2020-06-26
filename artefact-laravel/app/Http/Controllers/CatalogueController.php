@@ -36,7 +36,7 @@ class CatalogueController extends Controller
      */
     public function store(Request $request)
     {
-        $data =$request->only(['editionno','personno']);
+        $data =$request->only(['editionno','productno']);
         //TODO validation
         $catalogue=Catalogue::create($data);
         return new CatalogueResource($catalogue);
@@ -73,7 +73,7 @@ class CatalogueController extends Controller
      */
     public function update(Request $request, Catalogue $catalogue)
     {
-        $data =$request->only(['editionno','personno']);
+        $data =$request->only(['editionno','productno']);
         //TODO validation
         $catalogue->update($data);
         return new CatalogueResource($catalogue);
