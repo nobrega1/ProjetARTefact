@@ -20,15 +20,7 @@ class CreateBrandTable extends Migration
             $table->string('name');
             $table->string('shortdescr');
             $table->text('longdescr')->nullable($value = true);
-            $table->string('distinctivesign')->nullable($value = true);
-            $table->string('lienimage')->nullable($value = true);
-
-
-
-
-
-
-
+   
         });
     }
 

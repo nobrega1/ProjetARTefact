@@ -16,7 +16,7 @@ class Catalogue extends JsonResource
     {
         return[
             'editionno'=>$this->editionno,
-            'personno'=>$this->personno
+            'productno'=>$this->productno
         ];
     }
 }

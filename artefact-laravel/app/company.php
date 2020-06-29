@@ -20,5 +20,9 @@ class Company extends Model
    {
       return $this->hasMany('App\Brands');
   }
+  public function contact()
+  {
+     return $this->belongsTo('App\contact');
+  }
  
 }

@@ -16,18 +16,18 @@ class CreateTestTable extends Migration
         Schema::create('test', function (Blueprint $table) {
             $table->id('no');
             $table->timestamps();
+            //foreignkey period
+            $table->biginteger('periodno')->unsigned();
+            $table->foreign('periodno')
+                ->references('no')
+                ->on('period')
+                ->onDelete('restrict')
+                ->onUpdate('restrict');
             //foreignkey product
             $table->biginteger('productno')->unsigned();
             $table->foreign('productno')
                 ->references('no')
                 ->on('product')
-                ->onDelete('restrict')
-                ->onUpdate('restrict');
-                //foreignkey period
-            $table->biginteger('periodno')->unsigned();
-            $table->foreign('periodno')
-                ->references('no')
-                ->on('period')
                 ->onDelete('restrict')
                 ->onUpdate('restrict');
             //foreignkey client
@@ -37,9 +37,9 @@ class CreateTestTable extends Migration
                 ->on('client')
                 ->onDelete('restrict')
                 ->onUpdate('restrict');
-            $table->date('start');
-            $table->date('end')->nullable($value = true);
-            $table->string('commentairestaff')->nullable($value = true);
+            $table->date('starttime');
+            $table->date('endtime')->nullable($value = true);
+            $table->text('commentairestaff')->nullable($value = true);
             $table->integer('stars')->nullable($value = true);
             $table->text('feedback')->nullable($value = true);
 

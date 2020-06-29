@@ -4,7 +4,7 @@ namespace App\Http\Resources;
 
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class Bookmark extends JsonResource
+class Contact extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -15,8 +15,10 @@ class Bookmark extends JsonResource
     public function toArray($request)
     {
         return[
-            'clientno'=>$this->clientno,
-            'productno'=>$this->productno
+            'companyno'=>$this->companyno,
+            'personno'=>$this->personno,
+            'since'=>$this->since,
+            'until'=>$this->until
         ];
     }
 }

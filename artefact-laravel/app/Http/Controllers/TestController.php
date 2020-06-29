@@ -37,7 +37,7 @@ class TestController extends Controller
      */
     public function store(Request $request)
     {
-        $data =$request->only(['periodno','productno','clientno','start','end','commentstaff','stars','feedback']);
+        $data =$request->only(['periodno','productno','clientno','starttime','endtime','commentairestaff','stars','feedback']);
         //TODO validation
         $test=Test::create($data);
         return new TestResource($test);

@@ -16,6 +16,9 @@ class Ebike extends Model
     {           
        return $this->belongsTo('App\road','bikeno');
    }
-   
+   public function ebikes()
+   {           
+      return $this->hasMany('App\Ebike');
+  }
  
 }

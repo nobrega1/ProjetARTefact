@@ -20,9 +20,6 @@ class Brand extends JsonResource
             'name'=>$this->name,
             'shortdescr'=>$this->shortdescr,
             'longdescr'=>$this->longdescr,
-
-
-
-            
-        ];    }
+        ]; 
+        }
 }

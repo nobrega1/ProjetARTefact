@@ -15,7 +15,7 @@ class Emtb extends JsonResource
     public function toArray($request)
     {
         return[
-            'mtbbikeno'=>$this->mtbbike,
+            'mtbbikeno'=>$this->mtbbikeno,
             'feature'=>$this->feature,
         ];       }
 }

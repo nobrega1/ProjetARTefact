@@ -2,20 +2,20 @@
 
 namespace App\Http\Controllers;
 
-use App\Ebike;
 use Illuminate\Http\Request;
-use App\Http\Resources\Ebike as EbikeResource;
+use App\Contact;
+use App\Http\Resources\Contact as ContactResource;
 
-class EbikeController extends Controller
+class ContactController extends Controller
 {
-    /**
+ /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        return EbikeResource::collection(Ebike::all());
+        return ContactResource::collection(Contact::all());
 
     }
 
@@ -37,10 +37,10 @@ class EbikeController extends Controller
      */
     public function store(Request $request)
     {
-        $data =$request->only(['roadbikeno,feature']);
+        $data =$request->only(['companyno','personno','since','until']);
         //TODO validation
-        $ebike=Ebike::create($data);
-        return new EbikeResource($ebike);
+        $contact=Contact::create($data);
+        return new ContactResource($contact);
     }
 
     /**
@@ -51,7 +51,8 @@ class EbikeController extends Controller
      */
     public function show($id)
     {
-        return new EbikeResource($bike);
+        return new ContactResource($bike);
+
     }
 
     /**
@@ -74,10 +75,11 @@ class EbikeController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $data =$request->only(['roadbikeno,feature']);
+        $data =$request->only(['companyno','personno','since','until']);
         //TODO validation
-        $ebike->update($data);
-        return new EbikeResource($ebike);
+        $contact->update($data);
+        return new ContactResource($contact);
+
     }
 
     /**
@@ -88,7 +90,7 @@ class EbikeController extends Controller
      */
     public function destroy($id)
     {
-        $ebike->delete();
+        $contact->delete();
 
     }
 }

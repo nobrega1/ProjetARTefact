@@ -30,6 +30,8 @@ Route::apiResource('jobs','JobController');
 Route::apiResource('products','ProductController');
 Route::apiResource('companies','CompanyController');
 Route::apiResource('brands','BrandController');
+Route::apiResource('contacts','ContactController');
+Route::apiResource('badges','BadgeController');
 Route::apiResource('bikes','BikeController');
 Route::apiResource('mtbs','MtbController');
 Route::apiResource('emtbs','EmtbController');
