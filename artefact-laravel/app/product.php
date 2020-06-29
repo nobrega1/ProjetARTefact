@@ -17,8 +17,8 @@ class Product extends Model
        return $this->belongsTo('App\Company','no');
    }
    
-   public function products()
+   public function bookmarks()
    {
-      return $this->hasMany('App\Products');
+      return $this->belongsTo('App\Bookmarks');
   }
 }

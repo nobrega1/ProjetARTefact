@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\bike;
+use App\road;
 use App\Http\Resources\Road as RoadResource;
 
 

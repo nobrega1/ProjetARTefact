@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Bike;
-
 use App\Http\Resources\Bike as BikeResource;
 
 

@@ -16,9 +16,17 @@ class Client extends Model
     public function tests()
     {
        return $this->hasMany('App\Test');
-   }
-   public function person()
-   {
+    }
+    public function person()
+    {
       return $this->belongsTo('App\person','no');
-  }
+    }
+    public function badge()
+    {
+      return $this->hasOne('App\Badge');
+    }
+    public function bookmarks()
+    {
+      return $this->hasmany('App\Bookmark');
+    }
 }

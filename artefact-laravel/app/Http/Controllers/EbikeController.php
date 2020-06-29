@@ -37,7 +37,7 @@ class EbikeController extends Controller
      */
     public function store(Request $request)
     {
-        $data =$request->only(['mtbbikeno,feature']);
+        $data =$request->only(['roadbikeno,feature']);
         //TODO validation
         $ebike=Ebike::create($data);
         return new EbikeResource($ebike);
@@ -74,7 +74,7 @@ class EbikeController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $data =$request->only(['mtbbikeno,feature']);
+        $data =$request->only(['roadbikeno,feature']);
         //TODO validation
         $ebike->update($data);
         return new EbikeResource($ebike);

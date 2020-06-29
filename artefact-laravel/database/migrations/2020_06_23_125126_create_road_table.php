@@ -14,14 +14,15 @@ class CreateRoadTable extends Migration
     public function up()
     {
         Schema::create('road', function (Blueprint $table) {
-   //foreignkey
-   $table->biginteger('bikeno')->unsigned();
-   $table->foreign('bikeno')
-       ->references('no')
-       ->on('bike')
-       ->onDelete('restrict')
-       ->onUpdate('restrict');            $table->timestamps();
-            $table->string('feature');
+        //foreignkey
+        $table->biginteger('bikeno')->unsigned();
+        $table->foreign('bikeno')
+            ->references('no')
+            ->on('bike')
+            ->onDelete('restrict')
+            ->onUpdate('restrict');          
+        $table->timestamps();
+        $table->string('feature');
         });
     }
 

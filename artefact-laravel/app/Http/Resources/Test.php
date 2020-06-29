@@ -18,12 +18,12 @@ class Test extends JsonResource
             'no'=>$this->no,
             'periodno'=>$this->periodno,
             'productno'=>$this->productno,
-            'clientno'=>$this->start,
-            'start'=>$this->start,
-            'end'=>$this->end,
-            'commentstaff'=>$this->commentstaff,
+            'clientno'=>$this->clientno,
+            'starttime'=>$this->starttime,
+            'endtime'=>$this->endtime,
+            'commentairestaff'=>$this->commentairestaff,
             'stars'=>$this->stars,
-            'feedback'=>$this->stars,
+            'feedback'=>$this->feedback,
 
 
         ];      }

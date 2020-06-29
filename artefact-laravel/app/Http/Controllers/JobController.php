@@ -36,7 +36,7 @@ class JobController extends Controller
      */
     public function store(Request $request)
     {
-        $data =$request->only(['staffpersonno','editionno']);
+        $data =$request->only(['staffpersonno','editionno','description']);
         //TODO validation
         $job=Job::create($data);
         return new JobResource($job);
@@ -87,6 +87,6 @@ class JobController extends Controller
      */
     public function destroy($id)
     {
-        $editon->delete();
+        $job->delete();
     }
 }

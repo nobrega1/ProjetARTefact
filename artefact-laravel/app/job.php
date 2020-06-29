@@ -8,6 +8,7 @@ class Job extends Model
 {
     protected $table='job';
 
+    protected $fillable=['editionno','staffpersonno','description'];
 
     public function edition()
     {

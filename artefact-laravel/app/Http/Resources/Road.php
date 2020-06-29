@@ -4,7 +4,7 @@ namespace App\Http\Resources;
 
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class Gravel extends JsonResource
+class Road extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -17,5 +17,6 @@ class Gravel extends JsonResource
         return[
             'bikeno'=>$this->bikeno,
             'feature'=>$this->feature,
-        ];       }
+        ];       
+    }
 }

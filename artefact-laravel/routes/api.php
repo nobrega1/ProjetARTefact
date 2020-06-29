@@ -20,7 +20,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 //Routes API
 Route::apiResource('editions','EditionController');
 Route::apiResource('events','EventController');
-
 Route::apiResource('periods','PeriodController');
 Route::apiResource('tests','TestController');
 Route::apiResource('clients','ClientController');
@@ -31,13 +30,15 @@ Route::apiResource('jobs','JobController');
 Route::apiResource('products','ProductController');
 Route::apiResource('companies','CompanyController');
 Route::apiResource('brands','BrandController');
+Route::apiResource('contacts','ContactController');
+Route::apiResource('badges','BadgeController');
 Route::apiResource('bikes','BikeController');
 Route::apiResource('mtbs','MtbController');
 Route::apiResource('emtbs','EmtbController');
 Route::apiResource('gravels','GravelController');
 Route::apiResource('roads','RoadController');
 Route::apiResource('ebikes','EbikeController');
-
-
-
+Route::apiResource('adressetypes','AdressetypeController');
+Route::apiResource('catalogues','CatalogueController');
+Route::apiResource('bookmarks','BookmarkController');
 

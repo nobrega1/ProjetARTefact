@@ -40,9 +40,8 @@ class TestController extends Controller
         $validatedData = $request->validate([
             'start' => 'required|after:period.start',
             'end' => 'before:period.end',
-
         ]);
-        $data =$request->only(['periodno','productno','clientno','start','end','commentstaff','stars','feedback']);
+        $data =$request->only(['periodno','productno','clientno','starttime','endtime','commentairestaff','stars','feedback']);
         //TODO validation
         $test=Test::create($data);
         return new TestResource($test);

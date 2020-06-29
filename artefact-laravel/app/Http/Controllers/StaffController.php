@@ -87,6 +87,6 @@ class StaffController extends Controller
      */
     public function destroy($id)
     {
-        $client->delete();
+        $staff->delete();
     }
 }
