@@ -20,4 +20,8 @@ class Period extends Model
    {
       return $this->hasMany('App\Test');
   }
+  public function badge()
+  {
+    return $this->hasOne('App\Badge');
+  }
 }

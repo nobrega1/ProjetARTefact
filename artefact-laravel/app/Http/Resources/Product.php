@@ -17,9 +17,10 @@ class Product extends JsonResource
         return[
             'no'=>$this->no,
             'brandno'=>$this->brandno,
-            'name'=>$this->name,
             'shortdescr'=>$this->shortdescr,
             'longdescr'=>$this->longdescr,
+            'distinctivesign'=>$this->distinctivesign,
+            'lienimage'=>$this->lienimage,
             
         ];    }
 }

@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Gravel;
+use App\Mtb;
 use App\Http\Resources\Mtb as MtbResource;
 
 

@@ -4,7 +4,7 @@ namespace App\Http\Resources;
 
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class Test extends JsonResource
+class Badge extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -17,14 +17,7 @@ class Test extends JsonResource
         return[
             'no'=>$this->no,
             'periodno'=>$this->periodno,
-            'productno'=>$this->productno,
-            'clientno'=>$this->clientno,
-            'starttime'=>$this->starttime,
-            'endtime'=>$this->endtime,
-            'commentairestaff'=>$this->commentairestaff,
-            'stars'=>$this->stars,
-            'feedback'=>$this->feedback,
-
-
-        ];      }
+            'clientno'=>$this->clientno
+        ];
+    }
 }

@@ -16,8 +16,18 @@ class CreateBadgeTable extends Migration
         Schema::create('badge', function (Blueprint $table) {
             $table->id('no');
             $table->timestamps();
-            $table->foreignId('periodno')->references('no')->on('period');
-            $table->foreignId('clientno')->references('no')->on('client');
+            $table->biginteger('periodno')->unsigned();
+            $table->foreign('periodno')
+                ->references('no')
+                ->on('period')
+                ->onDelete('restrict')
+                ->onUpdate('restrict');
+            $table->biginteger('clientno')->unsigned();
+            $table->foreign('clientno')
+                ->references('no')
+                ->on('client')
+                ->onDelete('restrict')
+                ->onUpdate('restrict');
         });
     }
 

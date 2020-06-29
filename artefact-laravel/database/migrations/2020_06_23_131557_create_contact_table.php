@@ -13,9 +13,19 @@ class CreateContactTable extends Migration
      */
     public function up()
     {
-        Schema::create('contact', function (Blueprint $table) {
-            $table->foreignId('companyno')->references('no')->on('company');
-            $table->foreignId('personno')->references('no')->on('person');
+        Schema::create('contact', function (Blueprint $table) {    
+            $table->biginteger('companyno')->unsigned();
+            $table->foreign('companyno')
+                ->references('no')
+                ->on('company')
+                ->onDelete('restrict')
+                ->onUpdate('restrict');
+            $table->biginteger('personno')->unsigned();
+            $table->foreign('personno')
+                ->references('no')
+                ->on('person')
+                ->onDelete('restrict')
+                ->onUpdate('restrict');
             $table->timestamps();
             $table->date('since');
             $table->date('until')->nullable($value = true);

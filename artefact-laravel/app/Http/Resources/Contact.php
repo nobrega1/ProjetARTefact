@@ -4,7 +4,7 @@ namespace App\Http\Resources;
 
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class Emtb extends JsonResource
+class Contact extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -15,7 +15,10 @@ class Emtb extends JsonResource
     public function toArray($request)
     {
         return[
-            'mtbbikeno'=>$this->mtbbikeno,
-            'feature'=>$this->feature,
-        ];       }
+            'companyno'=>$this->companyno,
+            'personno'=>$this->personno,
+            'since'=>$this->since,
+            'until'=>$this->until
+        ];
+    }
 }

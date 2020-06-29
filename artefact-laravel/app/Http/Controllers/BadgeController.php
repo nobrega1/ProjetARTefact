@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Ebike;
 use Illuminate\Http\Request;
-use App\Http\Resources\Ebike as EbikeResource;
+use App\Badge;
+use App\Http\Resources\Badge as BadgeResource;
 
-class EbikeController extends Controller
+class BadgeController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +15,7 @@ class EbikeController extends Controller
      */
     public function index()
     {
-        return EbikeResource::collection(Ebike::all());
+        return BadgeResource::collection(Badge::all());
 
     }
 
@@ -37,10 +37,10 @@ class EbikeController extends Controller
      */
     public function store(Request $request)
     {
-        $data =$request->only(['roadbikeno,feature']);
+        $data =$request->only(['periodno','clientno']);
         //TODO validation
-        $ebike=Ebike::create($data);
-        return new EbikeResource($ebike);
+        $badge=Badge::create($data);
+        return new BadgeResource($badge);
     }
 
     /**
@@ -51,7 +51,8 @@ class EbikeController extends Controller
      */
     public function show($id)
     {
-        return new EbikeResource($bike);
+        return new BadgeResource($bike);
+
     }
 
     /**
@@ -74,10 +75,11 @@ class EbikeController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $data =$request->only(['roadbikeno,feature']);
+        $data =$request->only(['periodno','clientno']);
         //TODO validation
-        $ebike->update($data);
-        return new EbikeResource($ebike);
+        $badge->update($data);
+        return new BadgeResource($badge);
+
     }
 
     /**
@@ -88,7 +90,7 @@ class EbikeController extends Controller
      */
     public function destroy($id)
     {
-        $ebike->delete();
+        $badge->delete();
 
     }
 }

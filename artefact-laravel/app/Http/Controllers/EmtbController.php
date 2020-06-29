@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Emtb;
+
 use Illuminate\Http\Request;
+use App\Emtb;
 use App\Http\Resources\Emtb as EmtbResource;
 
 class EmtbController extends Controller

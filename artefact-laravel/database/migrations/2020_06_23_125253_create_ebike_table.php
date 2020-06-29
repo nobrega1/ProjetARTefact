@@ -19,7 +19,8 @@ class CreateEbikeTable extends Migration
                 ->references('bikeno')
                 ->on('road')
                 ->onDelete('restrict')
-                ->onUpdate('restrict');            $table->timestamps();
+                ->onUpdate('restrict');        
+            $table->timestamps();
             $table->string('feature');
         });
     }
