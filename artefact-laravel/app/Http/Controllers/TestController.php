@@ -37,6 +37,10 @@ class TestController extends Controller
      */
     public function store(Request $request)
     {
+        $validatedData = $request->validate([
+            'start' => 'required|after:period.start',
+            'end' => 'before:period.end',
+        ]);
         $data =$request->only(['periodno','productno','clientno','starttime','endtime','commentairestaff','stars','feedback']);
         //TODO validation
         $test=Test::create($data);
