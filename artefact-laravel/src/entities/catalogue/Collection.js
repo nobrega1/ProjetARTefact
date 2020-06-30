@@ -15,5 +15,5 @@ export default class extends ImCollection {
     this.metadata = new Model();
 
   }
-  
+ 
 }
