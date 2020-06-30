@@ -1,15 +1,9 @@
-/* import Catalogue from '../resources/js/Viewcatalogue'
- */
+import Products from 'entities/product/collection';
+import ViewProducts from 'entities/product/viewCollection';
 
-
-
-let catalogues = new catalogue();
-let vCatalogue = new ViewCatalogue({
-    collection: catalogues,
-    el: '#'
+let products = new Products();
+let vProducts = new ViewProducts({
+    collection: products,
+    el:'#products-list'
 });
-
-catalogues.fetch({reset:true});
-setInterval(() => {  
-    tasks.fetch();
-  }, 10000);
+products.fetch({reset:true});
