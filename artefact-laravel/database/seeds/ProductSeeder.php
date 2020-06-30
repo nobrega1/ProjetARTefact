@@ -22,7 +22,7 @@ class ProductSeeder extends Seeder
                          'libero. Cras eu massa sed lorem mattis lacinia. ' . 
                          'Vestibulum id feugiat turpis. Proin a lorem ligula',
                 'distinctivesign'=>'distinctivesign' . $i,
-                'lienimage'=>'lienimage' . $i
+                'lienimage'=>'https://source.unsplash.com/random'
                 ]);
         }
     }
