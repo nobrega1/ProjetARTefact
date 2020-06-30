@@ -1,5 +1,5 @@
 import {ImView} from 'lib/ImBackbone';
-import product from 'templates/product.handlebars';
+import product from 'entities/product/product.handlebars';
 
 export default class extends ImView {
 
@@ -14,7 +14,7 @@ export default class extends ImView {
         }
       
         render() {
-          let dom = $(product({...this.model.toJSON()}));
+          let dom = $(product(this.model.toJSON()));
           this.$el.replaceWith(dom);
           this.setElement(dom);
           return this;
