@@ -19335,8 +19335,13 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
+<<<<<<< HEAD
 __webpack_require__(/*! D:\Cours\Deuxieme\Projart\ProjetARTefact\artefact-laravel\resources\js\app.js */"./resources/js/app.js");
 module.exports = __webpack_require__(/*! D:\Cours\Deuxieme\Projart\ProjetARTefact\artefact-laravel\resources\sass\app.scss */"./resources/sass/app.scss");
+=======
+__webpack_require__(/*! C:\Users\filip\Desktop\cours\ProjetARTefact\artefact-laravel\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Users\filip\Desktop\cours\ProjetARTefact\artefact-laravel\resources\sass\app.scss */"./resources/sass/app.scss");
+>>>>>>> ce194667e56195f8ec2164463d9376b3487cd4dd
 
 
 /***/ })
