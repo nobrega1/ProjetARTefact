@@ -1,4 +1,5 @@
-import Catalogue from 'entities/catalogue/collection'
+import Catalogue from '../resources/js/Viewcatalogue'
 
-let catalogue = new Catalogue();
-catalogue.fetch();
+
+
+
