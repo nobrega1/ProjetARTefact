@@ -14,7 +14,7 @@ export default class extends ImView {
         }
       
         render() {
-          let dom = $(catalogue(...this.modelEdition.toJSON(),...thismodelProduct.toJSON()));
+          let dom = $(catalogue(...this.modelEdition.toJSON(),...this.modelProduct.toJSON()));
           this.$el.replaceWith(dom);
           this.setElement(dom);
           return this;

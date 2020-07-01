@@ -3,6 +3,7 @@
 namespace App\Http\Resources;
 
 use Illuminate\Http\Resources\Json\JsonResource;
+use App\Http\Resources\Edition as EditionResource;
 
 class Product extends JsonResource
 {
@@ -21,6 +22,6 @@ class Product extends JsonResource
             'longdescr'=>$this->longdescr,
             'distinctivesign'=>$this->distinctivesign,
             'lienimage'=>$this->lienimage,
-            
+            'editions' => EditionResource::collection($this->whenLoaded('editions')),            
         ];    }
 }

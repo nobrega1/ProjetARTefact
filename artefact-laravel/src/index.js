@@ -1,5 +1,5 @@
 
-import Catalogues from 'entities/catalogue/collection';
+import Products from 'entities/product/collection';
 import ViewCatalogues from 'entities/catalogue/viewCollection';
 
 /* let products = new Products();
@@ -16,4 +16,12 @@ let vCatalogues = new ViewCatalogues({
 catalogues.fetch({reset:true});
 /* products.fetch({reset:true})
  */
-catalogues.fetch({reset:true});
+let products = new Products();
+
+products.fetch({reset:true,success:()=>{
+    let p=products.models();
+
+    //todo loop or filter
+    for(p )
+    console.log(products.at(0).get('editions').some(edition=>edition.eventno==2));
+}});
