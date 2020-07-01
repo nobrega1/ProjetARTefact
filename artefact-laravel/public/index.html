@@ -1,34 +1,144 @@
+
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="utf-8">
-    <title>Bike test gryon 2020 </title>	
-  </head>
-  <body>
-<!--     // data-role=admin
- -->    <div id='products'>
-      <h1>Products</h1>
-      <table>
-        <thead>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bike Test Gryon</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Bike Test Gryon</h1>
+        <!--ajouter image du logo au lieu du h1-->
+        <!--<img src="src/img/BikeTestLogo.svg" alt="">-->
+        <!--ajouter icone menu en format mobile-->
+        <!--menu de navigation qui va se retrouver dans l'icone menu quand format mobile-->
+        <nav>
+            <div class="btn-nav icon-menu"></div>
+            <ul>
+                <li><a href="#allProducts">Catalogue</a></li>
+                <li><a href="#allTests">Historique des tests</a></li>
+                <li><a href="#profile">Mon compte</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <div class="page" name="allProducts">
+            <h1>Catalogue</h1>
+            <div id="products-list" class="row"></div>
 
-        </thead>
-<!--      Id pour la liste des produits
- -->        <tbody id="products-list">
+            <nav class="navbar navbar-light bg-light">
+                <form class="form-inline">
+                  <input class="form-control mr-sm-2" type="search" placeholder="Rechercher" aria-label="Search">
+                </form>
+              </nav>
 
-        </tbody>
-      </table>
-<!--       id pour le catalogue
- -->      <h1>Catalogue</h1>
-      <table>
-        <thead>
+             
+        </div>
 
-        </thead>
-     
-        <tbody id="catalogues-list">
+        <div class="page" name="allTests">
+            <h1>Historique des tests</h1>
+            <div id="tests-list" class="row"></div>
+            <nav class="navbar navbar-light bg-light">
+            <form class="form-inline">
+              <input class="form-control mr-sm-2" type="search" placeholder="Rechercher" aria-label="Search">
+            </form>
+          </nav>
+        </div>
 
-        </tbody>
-      </table>
-    </div>
-  </body>
+        <div class="page" name="profile">
+            <h1>Mon compte</h1>
+            <div id="profile-list" class="row"></div>
+            <div class="container">
+                <legend>Modifier les informations du compte</legend>
+                <div class="row">
+                    <form action="#">
+                        <div class="col-xs-6">
+
+                            <div class="form-group">
+                                <label for="nom">Nom:*</label>
+                                <input type="text" class="form-control" id="nom" placeholder="Nom" required="">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="prenom">Prénom:*</label>
+                                <input type="text" class="form-control" id="prenom" placeholder="Prénom" required="">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="mail">Adresse mail:*</label>
+                                <input type="text" class="form-control" id="mail" placeholder="Adresse mail" required="">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phonenumber">Numéro de téléphone:</label>
+                                <input type="text" class="form-control" id="phonenumber" placeholder="Numéro de téléphone">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="adress">Adresse:</label>
+                                <input type="text" class="form-control" id="adress" placeholder="Adresse">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="ruenumber">Numéro de rue :</label>
+                                <input type="text" class="form-control" id="ruenumber" placeholder="Numéro de rue">
+                            </div>
+
+                             <div class="form-group">
+                                <label for="casepostale">Case postale:</label>
+                                <input type="text" class="form-control" id="casepostale" placeholder="Case postale">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="npa">NPA:</label>
+                                <input type="text" class="form-control" id="npa" placeholder="NPA">   
+                            </div> 
+
+                            <div class="form-group">
+                                <label for="ville">Ville:</label>
+                                <input type="text" class="form-control" id="ville" placeholder="Ville">   
+                            </div> 
+
+                            <div class="form-group">
+                                <label for="canton">Canton:</label>
+                                <input type="text" class="form-control" id="canton" placeholder="Canton">   
+                            </div>
+
+                            <div class="form-group">
+                                <label for="pays">Pays:</label>
+                                <input type="text" class="form-control" id="pays" placeholder="Pays">   
+                            </div>
+
+                            <p>* Champs obligatoires</p>
+                            <input id="submit_button" type="submit" value="Valider" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="container">
+                <legend>Bienvenue !</legend>
+                <div class="row">
+                    <form action="#">
+                        <div class="col-xs-6">
+                            
+                            <div class="form-group">
+                                <label for="mail">Adresse mail</label>
+                                <input type="text" class="form-control" id="mail" required="">
+                            </div>   
+                            <div class="form-group">
+                                <label for="password">Mot de passe</label>
+                                <input type="text" class="form-control" id="password" required="">
+                            </div> 
+                            <li><a href="#passwordforgotten"></a>J'ai oublié mon mot de passe</li>
+                            <input id="connection_button" type="submit" value="Se connecter" />
+                            <input id="create_account_button" type="submit" value="Créer un compte" />
+            </div>
+        
+        </div>
+    </main>
+</body>
   <script src="bundle.js"></script>
 </html>
