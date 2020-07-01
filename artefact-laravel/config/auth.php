@@ -46,6 +46,11 @@ return [
             'provider' => 'users',
             'hash' => false,
         ],
+        'person' => [
+            'redirectTo' => 'person.home',
+            'driver' => 'session',
+            'provider' => 'person',
+        ],
     ],
 
     /*
@@ -69,6 +74,10 @@ return [
         'users' => [
             'driver' => 'eloquent',
             'model' => App\User::class,
+        ],
+        'person' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Person::class,
         ],
 
         // 'users' => [

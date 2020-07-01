@@ -24,6 +24,7 @@ class CreatePersonTable extends Migration
             $table->string('firstname');
             $table->string('email')->unique();
             $table->string('password');
+            $table->rememberToken();
             $table->boolean('isactive')->default(false);
             $table->Integer('phonenumber')->nullable($value = true);
         });

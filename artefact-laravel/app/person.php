@@ -9,8 +9,18 @@ class Person extends Model
     protected $table='person';
 
     protected $primaryKey = 'no';
+    protected $guarded = 'no';
 
     protected $fillable = ['addressno','name','firstname','email','password','isactive','phonenumber'];
+    
+    protected $hidden = [
+      'password', 'remember_token',
+    ];
+
+    public function getAuthPassword()
+    {
+      return $this->password;
+    }
 
 
     public function address()
