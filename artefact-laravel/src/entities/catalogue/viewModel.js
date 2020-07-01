@@ -1,7 +1,5 @@
 import {ImView} from 'lib/ImBackbone';
 import catalogue from 'entities/catalogue/catalogue.handlebars';
-import product from 'entities/product/product.handlebars';
-
 
 export default class extends ImView {
 
@@ -16,7 +14,7 @@ export default class extends ImView {
         }
       
         render() {
-          let dom = $(catalogue({...this.model.toJSON(), ...this.model.toJSON()}));
+          let dom = $(catalogue(...this.modelEdition.toJSON(),...thismodelProduct.toJSON()));
           this.$el.replaceWith(dom);
           this.setElement(dom);
           return this;
