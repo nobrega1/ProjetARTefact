@@ -2,6 +2,8 @@ import Products from 'entities/product/collection';
 import ViewProducts from 'entities/product/viewCollection';
 import Catalogues from 'entities/catalogue/collection';
 import ViewCatalogues from 'entities/catalogue/viewCollection';
+import Persons from 'entities/compte/collection';
+import Tests from 'entities/test/collection';
 /* 
 let products = new Products();
 let vProducts = new ViewProducts({
