@@ -44,23 +44,32 @@
     <main>
       <div id="container">
 
+        <!--PAGE CATALOGUE-->
         <div class="page" name="allProducts">
             <h1>Catalogue</h1>
             
+            <!--Barre de recherche du catalogue-->
             <div id="products-list" class="row"></div>
-
                 <form class="form-inline">
-                  <input class="form-control mr-sm-2" type="search" placeholder="Rechercher" aria-label="Search">
+                <input class="form-control mr-sm-2" type="search" placeholder="Rechercher" aria-label="Search">
                 </form>
-        </div>
+            </div>
+        
+        <!--PAGE HISTORIQUE DES TESTS-->
         <div class="page" name="allTests">
             <h1>Historique des tests</h1>
+
+            <!--Barre de recherche de l'historique des tests-->
             <div id="tests-list" class="row"></div>
-            <form class="form-inline">
-              <input class="form-control mr-sm-2" type="search" placeholder="Rechercher" aria-label="Search">
-            </form>
-            <div class="row">
-            <div class="well">
+                <form class="form-inline">
+                <input class="form-control mr-sm-2" type="search" placeholder="Rechercher" aria-label="Search">
+                </form>
+            </div>
+
+            <!--Présentation des tests-->
+            <div class="container">
+              <div class="row">
+                <div class="well">
                 <div class="list-group">
                   <a href="#" class="list-group-item active">
                         <div class="media col-md-3">
@@ -74,8 +83,6 @@
                             <p class="list-group-item-text"> Type </p>
                         </div>
                         <div class="col-md-3 text-center">
-                         
-                            
                             <div class="stars">
                                 <span class="glyphicon glyphicon-star"></span>
                                 <span class="glyphicon glyphicon-star"></span>
@@ -85,65 +92,89 @@
                             </div>
                             <p> date du test </p>
                         </div>
-                  </a>
-                  
-                  
+                  </a> 
                 </div>
                 </div>
-          </div>
-        </div>
+              </div>
+            </div>
+
+        <!--PAGE MON COMPTE-->
         <div class="page" name="profile">
             <h1>Mon compte</h1>
+
+            <!--Formulaire modification-->
             <div id="profile-list" class="row"></div>
             <div class="container">
                 <legend>Modifier les informations du compte</legend>
-                <div class="row">
-                    <form action="#">
-                        <div class="col-xs-6">
 
-                            <div class="form-group">
-                                <label for="nom">Nom:*</label>
-                                <input type="text" class="form-control" id="nom" placeholder="Nom" required="">
-                            </div>
+                <form>
+                  <div class="form-group">
+                    <label for="inputName">Nom *</label>
+                    <input type="name" class="form-control" id="inputName" placeholder="Mon nom" required="">
+                  </div>
+                  <div class="form-group">
+                    <label for="inputFirstname">Prénom *</label>
+                    <input type="firstname" class="form-control" id="inputFirstname" placeholder="Mon prénom" required="">
+                  </div>
+                  <div class="form-group">
+                    <label for="inputEmail">Adresse Email *</label>
+                    <input type="email" class="form-control" id="inputEmail" placeholder="Mon adresse email" required="">
+                  </div>
+                  <div class="form-group">
+                    <label for="inputPhonenumber">Numéro de téléphone</label>
+                    <input type="phonenumber" class="form-control" id="inputPhonenumber" placeholder="Mon numéro de téléphone">
+                  </div>
+                  <div class="form-group">
+                    <label for="inputAdress">Adresse</label>
+                    <input type="adress" class="form-control" id="inputAdress" placeholder="Mon adresse">
+                  </div>
+                  <div class="form-group">
+                    <label for="inputRoadnumber">Numéro de rue</label>
+                    <input type="roadnumber" class="form-control" id="inputRoadnumber" placeholder="Mon numéro de rue">
+                  </div>
+                  <div class="form-group">
+                    <label for="inputNPA">NPA</label>
+                    <input type="NPA" class="form-control" id="inputNPA" placeholder="Mon npa">
+                  </div>
+                  <div class="form-group">
+                    <label for="inputCity">Ville</label>
+                    <input type="city" class="form-control" id="inputCity" placeholder="Ma ville">
+                  </div>
+                  <div class="form-group">
+                    <label for="inputCanton">Canton</label>
+                    <input type="canton" class="form-control" id="inputCanton" placeholder="Mon canton">
+                  </div><div class="form-group">
+                    <label for="inputCountry">Pays</label>
+                    <input type="country" class="form-control" id="inputCountry" placeholder="Mon pays">
+                  </div>
+                  <p>* Champs obligatoires</p>
+                  <button type="submit" class="btn btn-default">Valider</button>
+                </form>
 
-                            <div class="form-group">
-                                <label for="prenom">Prénom:*</label>
-                                <input type="text" class="form-control" id="prenom" placeholder="Prénom" required="">
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="mail">Adresse mail:*</label>
-                                <input type="text" class="form-control" id="mail" placeholder="Adresse mail" required="">
-                            </div>
-                            <input id="submit_button" type="submit" value="Valider" />
-                        </div>
-                    </form>
-                </div>
+                
             </div>
-            <div class="container">
-                <legend>Bienvenue !</legend>
-                <div class="row">
-                    <form action="#">
-                        <div class="col-xs-6">
-                            
-                            <div class="form-group">
-                                <label for="mail">Adresse mail</label>
-                                <input type="text" class="form-control" id="mail" required="">
-                            </div>   
-                            <div class="form-group">
-                                <label for="password">Mot de passe</label>
-                                <input type="text" class="form-control" id="password" required="">
-                            </div> 
-                            <li><a href="#passwordforgotten"></a>J'ai oublié mon mot de passe</li>
-                            <input id="connection_button" type="submit" value="Se connecter" />
-                            <input id="create_account_button" type="submit" value="Créer un compte" />
+
+        <!--PAGE ACCUEIL-->
+        <div class="container">
+          <legend>Bienvenue !</legend>
+
+          <!--Formulaire-->
+          <form>
+            <div class="form-group">
+              <label for="inputEmail">Adresse Email</label>
+              <input type="email" class="form-control" id="inputEmail" placeholder="Email" required="">
             </div>
-        
+            <div class="form-group">
+              <label for="inputPassword">Mot de passe</label>
+              <input type="password" class="form-control" id="inputPassword" placeholder="Mot de passe" required="">
+            </div>
+            
+            <button type="submit" class="btn btn-default">Se connecter</button>
+            <button type="submit" class="btn btn-default">Créer un compte</button>
+          </form>
         </div>
-      </div>
     </main>
 </body>
   <script src="bundle.js"></script>
   <script src="js/nav.js"></script>
-
 </html>
