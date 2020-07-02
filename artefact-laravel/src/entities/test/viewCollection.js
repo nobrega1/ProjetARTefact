@@ -1,5 +1,5 @@
 import {ImView} from 'lib/ImBackbone';
-import View from 'entities/compte/viewModel';
+import View from 'entities/test/viewModel';
 
 export default class extends ImView {
 
