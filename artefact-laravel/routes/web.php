@@ -14,12 +14,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('acceuil');
+    return view('welcome');
 });
-
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-
-Route::get('login', 'TraiteLogin@traitelogin')->name('login');
-Route::post('login', 'TraiteLogin@traitelogin')->name('login');

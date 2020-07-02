@@ -3,11 +3,8 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Contracts\Auth\MustVerifyEmail;
-use Illuminate\Foundation\Auth\Person as Authenticatable;
-use Illuminate\Notifications\Notifiable;
 
-class Person extends Authenticatable
+class Person extends Model
 {
     protected $table='person';
 
