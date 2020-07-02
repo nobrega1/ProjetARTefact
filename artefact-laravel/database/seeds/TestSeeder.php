@@ -20,7 +20,7 @@ class TestSeeder extends Seeder
         for ($i = 1; $i <= 100; $i++) {
             $date=$this->randDate();
             DB::table('test')->insert([
-                'periodno' => rand(1,100),
+                'periodno' => rand(1,5),
                 'productno' => rand(1,100),
                 'clientno' => rand(1,100),
                 'starttime' => $date,

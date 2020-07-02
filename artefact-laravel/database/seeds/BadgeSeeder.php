@@ -14,7 +14,7 @@ class BadgeSeeder extends Seeder
         DB::table('badge')->delete();
         for ($i = 1; $i <= 100; $i++) {
             DB::table('badge')->insert([
-                'periodno' => rand(1,100),
+                'periodno' => rand(1,5),
                 'clientno' => rand(1,100)
                 ]);
         }

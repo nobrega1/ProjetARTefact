@@ -1,27 +1,27 @@
 
 import Products from 'entities/product/collection';
-import ViewCatalogues from 'entities/catalogue/viewCollection';
+import ViewProducts from 'entities/product/viewCollection';
 
-/* let products = new Products();
+
+ let products = new Products();
 let vProducts = new ViewProducts({
     collection: products,
     el:'#products-list'
 });
-let catalogues = new Catalogues();
-let vCatalogues = new ViewCatalogues({
-    collection: catalogues,
-    el:'#catalogues-list'
-});
+// let catalogues = new Catalogues();
+// let vCatalogues = new ViewCatalogues({
+    // collection: catalogues,
+    // el:'#catalogues-list'
+// });
 
-catalogues.fetch({reset:true});
-/* products.fetch({reset:true})
- */
-let products = new Products();
-
+// catalogues.fetch({reset:true});
+//  products.fetch({reset:true})
+ 
+    
 products.fetch({reset:true,success:()=>{
-    let p=products.models();
+    let p=products.models;
+ 
 
     //todo loop or filter
-    for(p )
-    console.log(products.at(0).get('editions').some(edition=>edition.eventno==2));
+    console.log(products.at(0).get('editions')/* .filter(edition=>edition.no==1) */);
 }});

@@ -1,11 +1,11 @@
 import { ImView } from 'lib/ImBackbone';
-import View from 'entities/catalogue/viewModel';
+import View from 'entities/product/viewModel';
 
 export default class extends ImView {
 
   initialize(attrs, options) {
-    this.modelEdition = attrs.modelEdition,
-      this.modelProduct = attrs.modelProduct,
+    // this.modelEdition = attrs.modelEdition,
+    //   this.modelProduct = attrs.modelProduct,
       this.listenTo(this.collection, 'add remove reset', this.render);
   }
 
@@ -15,7 +15,6 @@ export default class extends ImView {
     for (let model of models) {
       let view = new View({ model });
       view.render().$el.appendTo(this.$el);
-      console.log('loop');
     }
 
     return this;
