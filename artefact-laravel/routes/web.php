@@ -21,5 +21,10 @@ Route::get('/', function () {
 Route::get('/home', 'HomeController@index')->name('home');
 
 
-Route::get('login', 'TraiteLogin@traitelogin')->name('login');
-Route::post('login', 'TraiteLogin@traitelogin')->name('login');
+Route::get('/login', 'TraiteLogin@traitelogin')->name('login');
+Route::post('/login', 'TraiteLogin@traitelogin')->name('login');
+
+Route::get('/register', 'TraiteRegister@traiteregister')->name('register');
+Route::post('/register', 'TraiteRegister@traiteregister')->name('register');
+//Route::get('register', 'PersonController@store')->name('register');
+//Route::post('register', 'PersonController@store')->name('register');

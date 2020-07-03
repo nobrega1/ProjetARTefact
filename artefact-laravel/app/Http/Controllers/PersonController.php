@@ -78,9 +78,6 @@ class PersonController extends Controller
     {
         $data =$request->only(['addressno','name','firstname','email','password','isactive','phonenumber']);
         //TODO validation
- 
-    
-       
         $person->uptade($data);
         return new PersonResource($person);
     }
