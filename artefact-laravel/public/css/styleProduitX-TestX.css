@@ -1,0 +1,63 @@
+@font-face{
+    font-family: 'FiraSans';
+    src: url('FiraSans-Regular.ttf');
+    src: url ('FiraSans-Bold.ttf');
+}
+
+
+body {
+    background-color: #FCFCFC;
+}
+
+header {
+    background-color: #FCFCFC;
+}
+nav {
+    background-color: #8b7f7d;
+}
+
+div > h1 {
+    color: #d29349;
+}
+
+div > h2 {
+    color: #4f4e4f;
+}
+
+div > h3 {
+    color: #4f4e4f;
+}
+
+li > a {
+    color: #fcfcfc;
+}
+
+button > a {
+    color: #4f4e4f;
+}
+
+.row {
+    background-color: #FCFCFC;
+    font-family: FiraSans-Regular;
+    padding-top: 2em;
+    padding: 2em;  
+}
+
+#description {
+    padding-top: 2em;   
+}
+
+#commantaire {
+    padding-top: 2em;   
+}
+
+
+.btn-retour{
+    width: 50%;
+    padding: 10px;
+
+}
+
+footer {
+    background-color: #4f4e4f;
+}
