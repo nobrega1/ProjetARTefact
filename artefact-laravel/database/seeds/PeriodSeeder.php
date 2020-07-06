@@ -23,7 +23,7 @@ class PeriodSeeder extends Seeder
     public function run()
     {
         DB::table('period')->delete();
-        for ($i=1; $i<=100; $i++) {
+        for ($i=1; $i<=5; $i++) {
             $date=$this->randDate();
             DB::table('period')->insert([
               'editionno'=> $i,

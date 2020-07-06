@@ -1,5 +1,6 @@
 import {ImCollection} from 'lib/ImBackbone';
-import Model from 'entities/catalogue/model';
+import Model from 'entities/product/model';
+
 
 export default class extends ImCollection {
 

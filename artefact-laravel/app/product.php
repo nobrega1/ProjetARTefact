@@ -21,4 +21,9 @@ class Product extends Model
    {
       return $this->belongsTo('App\Bookmarks');
   }
+  public function editions()
+  {
+     return $this->belongsToMany('App\Edition','catalogue','editionno','productno');
+ }
+  
 }

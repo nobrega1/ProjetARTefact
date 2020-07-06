@@ -15,7 +15,7 @@ class CatalogueSeeder extends Seeder
         for ($i = 1; $i <= 100; $i++) {
             DB::table('catalogue')->insert([
                 'productno' => rand(1,100),
-                'editionno' => rand(1,2)
+                'editionno' => $i
                 ]);
         }
     }
