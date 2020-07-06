@@ -17,11 +17,6 @@ nav {
     background-color: #8b7f7d;
 }
 
-.titrePage{
-    color: #d29349;
-    font-family: FiraSans-Bold;
-}
-
 nav > ul > li > a {
     color: #fcfcfc;
 }
@@ -34,18 +29,6 @@ nav > ul > li > a:hover {
     font-family: FiraSans-Regular;
 }
 
-a.selected {
-    
-    color: #4f4e4f;
-    text-decoration:none;
-    font-family: FiraSans-Bold;
+div.container form > div.from-group > label {
+    font-family: FiraSans-Regular;
 }
-
-.listeCategorie{
-    margin-top: 2rem;
-}
-
-.listeTest{
-    margin-top: 2rem;
-}
-

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bike Test Gryon</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+            integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="../css/styleMP.css">
+        <link rel="stylesheet" href="../css/nav.css">
+        <link rel="stylesheet" href="../css/mobile.css">
+        <link rel="icon-menu" type="image/png" href="../src/icomoonSVG/PNG/menu.png">
+        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+        <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+        
+
+
+    </head>
+    <body>
+        <header>
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="btn-retour">
+                        <button type="button" class="btn btn-default btn-lg">
+                                <a href="../index.html#allProducts"> <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-chevron-left" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/></svg>Retour</a>
+                        </button>
+                    </div>
+                </div>
+                <img class="btlogo" src="../img/BikeTestLogo.svg">
+                <div class="nav-modal">
+                    <div class="blob"></div>
+                    <nav class="nav justify-content-center">
+                        <ul>
+                            <li><a href="../index.html#allProducts">Catalogue</a> </li>
+                            <li><a href="../index.html#allTests">Historique des tests</a> </li>
+                            <li><a href="../index.html#profile">Mon compte</a> </li>
+                            <li><a href=""></a>logout</li>
+                    </nav>
+                </div>
+            </div>
+            <div class="head">
+                <div class="tile burger">
+                    <div class="meat">
+                        <div class="line one"></div>
+                        <div class="line two"></div>
+                        <div class="line three"></div>
+                    </div>
+                </div>
+            </div>
+            
+        </header>
+        <main>
+            <!--Formulaire modification-->
+            <div id="profile-list" class="row"></div>
+            <div class="container">
+                <legend>Modifier les informations du compte</legend>
+
+                <form>
+                    <div class="form-group">
+                        <label for="inputName">Nom *</label>
+                        <input type="name" class="form-control" id="inputName" placeholder="Mon nom" required="">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputFirstname">Prénom *</label>
+                        <input type="firstname" class="form-control" id="inputFirstname" placeholder="Mon prénom"
+                            required="">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputEmail">Adresse Email *</label>
+                        <input type="email" class="form-control" id="inputEmail" placeholder="Mon adresse email"
+                            required="">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPhonenumber">Numéro de téléphone</label>
+                        <input type="phonenumber" class="form-control" id="inputPhonenumber"
+                            placeholder="Mon numéro de téléphone">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputAdress">Adresse</label>
+                        <input type="adress" class="form-control" id="inputAdress" placeholder="Mon adresse">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputRoadnumber">Numéro de rue</label>
+                        <input type="roadnumber" class="form-control" id="inputRoadnumber" placeholder="Mon numéro de rue">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputNPA">NPA</label>
+                        <input type="NPA" class="form-control" id="inputNPA" placeholder="Mon npa">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputCity">Ville</label>
+                        <input type="city" class="form-control" id="inputCity" placeholder="Ma ville">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputCanton">Canton</label>
+                        <input type="canton" class="form-control" id="inputCanton" placeholder="Mon canton">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputCountry">Pays</label>
+                        <input type="country" class="form-control" id="inputCountry" placeholder="Mon pays">
+                    </div>
+                    <p>* Champs obligatoires</p>
+                    <button type="submit" class="btn btn-default">Valider</button>
+                </form>
+
+            </div>
+
+        </main>
+
+    </body>
+
+</html>

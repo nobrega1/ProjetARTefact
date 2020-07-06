@@ -12,6 +12,10 @@ body {
 header {
     background-color: #FCFCFC;
 }
+
+nav {
+    background-color: #8b7f7d;
+}
 nav > ul > li > a {
     color: #fcfcfc;
     font-family: FiraSans-Regular;
@@ -62,8 +66,4 @@ button > a {
     width: 50%;
     padding: 10px;
 
-}
-
-footer {
-    background-color: #4f4e4f;
 }
