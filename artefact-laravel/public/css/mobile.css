@@ -1,0 +1,32 @@
+@media screen and (max-width: 60rem), screen and (max-device-width: 60rem) {
+
+    #wrapper>nav ul {
+      display: none;
+    }
+  
+    .btn-nav {
+      display: block;
+      width: 100%;
+    }
+  
+    .btn-nav:before {
+      display: inline-block;
+      height: 100%;
+      width: 100%;
+      padding: .3rem;
+      text-align: center;
+      font-size: 1.7rem;
+      color: var(--deco-color);
+    }
+    #wrapper .mobile-show {
+      display: block;
+    }
+    #wrapper .mobile-hide {
+      display: none;
+    }
+  
+    #wrapper>nav ul li {
+      display: block;
+    }
+  
+  }
