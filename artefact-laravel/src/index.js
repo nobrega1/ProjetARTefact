@@ -4,6 +4,7 @@ import ViewProducts from 'entities/product/viewCollection';
 
 import Persons from 'entities/compte/collection';
 import Tests from 'entities/test/collection';
+
  
 let products = new Products();
 let vProducts = new ViewProducts({
@@ -22,6 +23,9 @@ products.fetch({reset:true,success:()=>{
     console.log(products.at(0).get('editions') .filter(edition=>edition.no==1) );
 }});
 
+
+    
+
 //recherche
 $(document).ready(function(){
     $("#productSearch").on("keyup", function() {
@@ -29,5 +33,18 @@ $(document).ready(function(){
       $("#productTable tr").filter(function() {
         $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
       });
+
+     
+      });
+    
     });
-  });
+
+  //selector
+//   $(window).on('load', function () {  
+  
+//     $('#brand').selectpicker({  
+//         'selectedText': 'cat'  
+//     });  
+
+//     // $('.selectpicker').selectpicker('hide');  
+// });  

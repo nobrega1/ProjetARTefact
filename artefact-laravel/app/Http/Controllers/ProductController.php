@@ -16,11 +16,8 @@ class ProductController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        //  return Product::all()->load('Editions');
-        
+    {        
         return ProductResource::collection(Product::all()->load('editions','brand'));
-
  
     }
 

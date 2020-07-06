@@ -17,7 +17,7 @@
     "axios": "^0.19.2",
     "babel-loader": "^8.1.0",
     "babel-polyfill": "^6.26.0",
-    "bootstrap": "^4.0.0",
+    "bootstrap": "^4.5.0",
     "cross-env": "^7.0.2",
     "css-loader": "^3.6.0",
     "handlebars-loader": "^1.7.1",
@@ -45,8 +45,10 @@
   "license": "ISC",
   "dependencies": {
     "backbone": "^1.4.0",
+    "bootstrap-select": "^1.13.18",
     "faker": "^4.1.0",
     "handlebars": "^4.7.6",
+    "multiple-select": "^1.5.2",
     "underscore": "^1.10.2"
   }
 }

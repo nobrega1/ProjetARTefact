@@ -7,3 +7,10 @@
 margin:auto;
     align-items: center;
 }
+#pageProduct{
+    width: 90%;
+    margin:auto;
+}
+#productSearch{
+    width: 30%;
+}
