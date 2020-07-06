@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/nav.css">
-    <link rel="stylesheet" href="css/mobile.css">
+    <link rel="stylesheet" href="css/products.css">
     <link rel="stylesheet" href="css/mobile.css">
     <link rel="icon-menu" type="image/png" href="../src/icomoonSVG/PNG/menu.png">
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
@@ -24,7 +24,7 @@
       <img  class="btlogo" src="img/BikeTestLogo.svg">
       <div class="nav-modal">
         <div class="blob"></div>
-        <nav class="nav justify-content-center">
+        <nav class="nav justify-content-center .navbar-expand{-sm|-md|-lg|-xl}">
           <ul>
             <li><a href="#allProducts">Catalogue</a> </li>
             <li><a href="#allTests">Historique des tests</a> </li>
@@ -44,14 +44,23 @@
     </header>
     
     <main>
-      <div id="container">
+      <div id="">
 
         <!--PAGE CATALOGUE-->
         <div class="page" name="allProducts">
             <h1>Catalogue</h1>
-            
+        <table class="table table-bordered .container-fluid" id="producttable" >
+        <thead class="">
+      
+        </thead>
+        <tbody id="products-list" >
+         
+          
+        </tbody>
+      </table>
+
             <!--Barre de recherche du catalogue-->
-            <div id="products-list" class="row"></div>
+            <div id="search-products-list" class="row"></div>
                 <form class="form-inline">
                 <input class="form-control mr-sm-2" type="search" placeholder="Rechercher" aria-label="Search">
                 </form>

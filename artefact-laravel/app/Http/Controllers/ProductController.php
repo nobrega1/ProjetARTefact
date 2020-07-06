@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Product;
 use Illuminate\Http\Request;
 use App\Http\Resources\Product as ProductResource;
+use App\Http\Resources\Brand as BrandResource;
+
 
 class ProductController extends Controller
 {
@@ -16,7 +18,9 @@ class ProductController extends Controller
     public function index()
     {
         //  return Product::all()->load('Editions');
-        return ProductResource::collection(Product::all()->load('editions'));
+        
+        return ProductResource::collection(Product::all()->load('editions','brand'));
+
  
     }
 
