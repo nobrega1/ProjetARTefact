@@ -14,3 +14,4 @@ $(window).on("popstate", evt  => {
     page.show();
   });
   $(window).trigger("popstate");
+
