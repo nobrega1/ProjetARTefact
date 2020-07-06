@@ -39,6 +39,7 @@ a.selected {
     color: #4f4e4f;
     text-decoration:none;
     font-family: FiraSans-Bold;
+    pointer-events: none;
 }
 
 .listeCategorie{
@@ -49,3 +50,15 @@ a.selected {
     margin-top: 2rem;
 }
 
+div.btn-compte button:hover {
+    text-decoration:none;
+    background-color: #d29349;
+    color: #FCFCFC ;
+    font-family: FiraSans-Bold;
+}
+
+div.btn-compte button a:hover {
+    text-decoration:none;
+    color: #FCFCFC ;
+    font-family: FiraSans-Bold;
+}

@@ -21,14 +21,19 @@ div.container form > div.from-group > label {
     font-family: FiraSans-Regular;
 }
 
+a {
+    text-decoration:none;
+    color: #4f434f;
+}
+
 .btn:hover {
     text-decoration:none;
     background-color: #d29349;
     font-family: FiraSans-Bold;
     color: #FCFCFC;
-}
+} 
 
-.btn a:hover {
+.btn {
     text-decoration:none;
-    color: #FCFCFC;
+    color: #4f4e4f;
 }
