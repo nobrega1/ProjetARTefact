@@ -21,3 +21,13 @@ products.fetch({reset:true,success:()=>{
     //todo loop or filter
     console.log(products.at(0).get('editions') .filter(edition=>edition.no==1) );
 }});
+
+//recherche
+$(document).ready(function(){
+    $("#productSearch").on("keyup", function() {
+      var value = $(this).val().toLowerCase();
+      $("#productTable tr").filter(function() {
+        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+      });
+    });
+  });
