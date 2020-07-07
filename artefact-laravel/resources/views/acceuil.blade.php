@@ -4,13 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- CSRF Token 
+   <!--CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    -->
     <title>{{ config('app.name', 'Laravel') }}</title>
 
-    <!-- Scripts 
-    <script src="{{ asset('js/app.js') }}" defer></script>-->
+    <!-- Scripts -->
+    <script src="{{ asset('js/app.js') }}" defer></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -27,7 +26,7 @@
 
                 <div class="card-body">
                     <form method="Post" action="{{ url('login') }}">
-                        
+                    @csrf
 
                         <div class="form-group row">
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail') }}</label>
@@ -86,7 +85,7 @@
 
                 <div class="card-body">
                     <form method="POST" action="{{ url('register') }}">
-      
+                    @csrf
 
                         <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>

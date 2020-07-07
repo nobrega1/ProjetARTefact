@@ -15,11 +15,11 @@ class TraiteLogin extends Controller
 
         
         $PersonMail = Person::where('email', $email )->first();
-        $PersonPass = Person::where('password', $password )->first();
+      //  $PersonPass = Person::where('password', $password )->first();
 
 
-        if(isset($PersonMail) && isset($PersonPass)){
-            return redirect('index.html');
+        if(isset($PersonMail)/* && isset($PersonPass)*/){
+            return view('dashboard');
         }else{
             return view('acceuil');
         }
