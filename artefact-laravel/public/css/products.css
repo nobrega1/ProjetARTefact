@@ -1,0 +1,16 @@
+.imgproduct{
+    width:50%;
+    margin: auto;
+}
+#productTable{
+    width: 80%;
+margin:auto;
+    align-items: center;
+}
+#pageProduct{
+    width: 90%;
+    margin:auto;
+}
+#productSearch{
+    width: 30%;
+}

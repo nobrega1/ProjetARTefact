@@ -12,9 +12,9 @@ class Product extends Model
 
     protected $fillable = ['brandno','shortdescr','longdescr','distinctivesign','lienimage'];
 
-    public function company()
+    public function brand()
     {           
-       return $this->belongsTo('App\Company','no');
+       return $this->belongsTo('App\Brand','brandno','no');
    }
    
    public function bookmarks()
