@@ -1,0 +1,34 @@
+@font-face{
+    font-family: 'FiraSans';
+    src: url('FiraSans-Regular.ttf');
+    src: url ('FiraSans-Bold.ttf');
+}
+
+html{
+    font-family: FiraSans-Regular;
+}
+
+body {
+    background-color: #FCFCFC;
+    font-family: FiraSans-Regular;
+}
+
+header {
+    background-color: #FCFCFC;
+}
+
+div.container form > div.from-group > label {
+    font-family: FiraSans-Regular;
+}
+
+.btn:hover {
+    text-decoration:none;
+    background-color: #d29349;
+    font-family: FiraSans-Bold;
+    color: #FCFCFC;
+}
+
+.btn a:hover {
+    text-decoration:none;
+    color: #FCFCFC;
+} 

@@ -13,10 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/artefact', function () {
+Route::get('/', function () {
     return view('acceuil');
 });
-Route::redirect('/', '/login');
+
 
 
 Route::get('/home', 'HomeController@index')->name('home');

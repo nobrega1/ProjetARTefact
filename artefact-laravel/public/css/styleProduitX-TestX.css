@@ -12,8 +12,14 @@ body {
 header {
     background-color: #FCFCFC;
 }
-nav {
-    background-color: #8b7f7d;
+nav > ul > li > a {
+    color: #fcfcfc;
+    font-family: FiraSans-Regular;
+}
+
+nav > ul > li > a:hover {
+    color: #d29349;
+    text-decoration:none;
 }
 
 div > h1 {
@@ -47,7 +53,7 @@ button > a {
     padding-top: 2em;   
 }
 
-#commantaire {
+#commentaire {
     padding-top: 2em;   
 }
 
@@ -58,6 +64,14 @@ button > a {
 
 }
 
-footer {
-    background-color: #4f4e4f;
+#back:hover {
+    text-decoration:none;
+    background-color: #d29349;
+    font-family: FiraSans-Bold;
+    color: #FCFCFC;
+} 
+
+#back {
+    text-decoration:none;
+    color: #4f4e4f;
 }
