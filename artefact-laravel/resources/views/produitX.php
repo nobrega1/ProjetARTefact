@@ -20,23 +20,24 @@
             <header>
                 <div class="row">
                     <div class="col-sm-4">
-                        <div class="btn-retour">
-                            <button type="button" class="btn btn-default btn-lg">
-                                    <a href="index.html#allProducts"> <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-chevron-left" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/></svg>Retour</a>
-                            </button>
-                        </div>
+                    <div class="btn-retour"> 
+                            <form action="../index.html#allProducts">
+                                <button type="submit" class="btn btn-default btn-lg" id="back">
+                                        <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-chevron-left" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/></svg>Retour
+                                </button>
+                            </form>
                     </div>
                     <div class="col-sm-4">
-                    <img  class="btlogo" src="img/BikeTestLogo.svg">
+                    <img  class="btlogo" src="../img/BikeTestLogo.svg">
                     </div>
                 </div>
                 <div class="nav-modal">
                   <div class="blob"></div>
                   <nav class="nav justify-content-center">
                     <ul>
-                        <li><a href="index.html#allProducts">Catalogue</a> </li>
-                        <li><a href="index.html#allTests">Historique des tests</a> </li>
-                        <li><a href="index.html#profile">Mon compte</a> </li>
+                    <li><a href="../index.html#allProducts">Catalogue</a> </li>
+                        <li><a href="../index.html#allTests">Historique des tests</a> </li>
+                        <li><a href="../index.html#profile">Mon compte</a> </li>
                         <li><a href="">logout</a> </li>
                     </ul>
                   </nav>
@@ -78,7 +79,7 @@
                 </div>
             </main>
         </div>
-        <footer> </footer>
+
     
     </body>
 

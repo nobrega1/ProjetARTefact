@@ -1,0 +1,64 @@
+@font-face{
+    font-family: 'FiraSans';
+    src: url('FiraSans-Regular.ttf');
+    src: url ('FiraSans-Bold.ttf');
+}
+
+
+body {
+    background-color: #FCFCFC;
+    font-family: FiraSans-Regular;
+}
+
+header {
+    background-color: #FCFCFC;
+}
+nav {
+    background-color: #8b7f7d;
+}
+
+.titrePage{
+    color: #d29349;
+    font-family: FiraSans-Bold;
+}
+
+nav > ul > li > a {
+    color: #fcfcfc;
+}
+nav > ul > li > a:hover {
+    color: #d29349;
+    text-decoration:none;
+}
+
+.nav-modal {
+    font-family: FiraSans-Regular;
+}
+
+a.selected {
+
+    color: #4f4e4f;
+    text-decoration:none;
+    font-family: FiraSans-Bold;
+    pointer-events: none;
+}
+
+.listeCategorie{
+    margin-top: 2rem;
+}
+
+.listeTest{
+    margin-top: 2rem;
+}
+
+div.btn-compte button:hover {
+    text-decoration:none;
+    background-color: #d29349;
+    color: #FCFCFC ;
+    font-family: FiraSans-Bold;
+}
+
+div.btn-compte button a:hover {
+    text-decoration:none;
+    color: #FCFCFC ;
+    font-family: FiraSans-Bold;
+} 
