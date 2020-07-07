@@ -25,5 +25,9 @@ class Product extends Model
   {
      return $this->belongsToMany('App\Edition','catalogue','editionno','productno');
  }
-  
+ public function tests()
+ {
+    return $this->hasMany('App\Test','no');
+}
+
 }

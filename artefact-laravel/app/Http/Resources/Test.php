@@ -3,6 +3,8 @@
 namespace App\Http\Resources;
 
 use Illuminate\Http\Resources\Json\JsonResource;
+use App\Http\Resources\Product as ProductResource;
+
 
 class Test extends JsonResource
 {
@@ -24,6 +26,8 @@ class Test extends JsonResource
             'commentairestaff'=>$this->commentairestaff,
             'stars'=>$this->stars,
             'feedback'=>$this->feedback,
+            'product' => ProductResource::make($this->whenLoaded('product'))          
+
 
 
         ];      }

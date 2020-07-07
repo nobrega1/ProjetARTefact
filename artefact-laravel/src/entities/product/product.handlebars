@@ -1,4 +1,11 @@
-<tr class="">
-   <td class="col-md-3"><img src={{lienimage}} class="img-thumbnail imgproduct "></img></td>
-   <td class="col-md-6">{{brand.name}}</br>{{shortdescr}}</br>{{longdescr}}</td>
-</tr>
+
+   <div class="card col-sm-6" >
+  <img class="card-img-top" src="{{lienimage}}" alt="">
+  <div class="card-body text-right ">
+    <h5 class="card-title">{{brand.name}}</h5>
+    <p class="card-text">{{shortdescr}}</p>
+   <p class="card-text ">{{longdescr}}</p>
+
+    <a href="/artefact/product/{{no}}" class="btn btn-primary">Plus d'infos</a>
+  </div>
+</div>

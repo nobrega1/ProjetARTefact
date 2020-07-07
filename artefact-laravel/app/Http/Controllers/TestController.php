@@ -15,8 +15,7 @@ class TestController extends Controller
      */
     public function index()
     {
-        return TestResource::collection(Test::all());
-
+        return TestResource::collection(Test::all()->load('product'));
     }
 
     /**
