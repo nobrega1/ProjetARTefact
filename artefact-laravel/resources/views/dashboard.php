@@ -73,7 +73,7 @@
               <div class="row">
                 <div class="well">
                 <div class="list-group">
-                  <a href="#" class="list-group-item active">
+                  <a href="" class="list-group-item active">
                         <div class="media col-md-3">
                             <figure class="pull-left">
                                 <img class="media-object img-rounded img-responsive"  src="http://placehold.it/350x250" alt="placehold.it/350x250" >

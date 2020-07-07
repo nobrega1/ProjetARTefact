@@ -27,7 +27,7 @@ class TraiteRegister extends Controller
             'isactive' => 1,
         ]);
 
-            return redirect('index.html');
+            return view('dashboard');
         }else{
             return view('acceuil');
 }
