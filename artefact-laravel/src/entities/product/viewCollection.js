@@ -4,8 +4,7 @@ import View from 'entities/product/viewModel';
 export default class extends ImView {
 
   initialize(attrs, options) {
-    // this.modelEdition = attrs.modelEdition,
-    //   this.modelProduct = attrs.modelProduct,
+
       this.listenTo(this.collection, 'add remove reset', this.render);
   }
 
