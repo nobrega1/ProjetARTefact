@@ -19,7 +19,7 @@ class TraiteLogin extends Controller
 
 
         if(isset($PersonMail)/* && isset($PersonPass)*/){
-            return view('dashboard');
+            return redirect('/');
         }else{
             return view('acceuil');
         }

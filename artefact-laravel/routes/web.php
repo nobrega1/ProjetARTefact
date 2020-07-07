@@ -22,13 +22,14 @@ Route::get('/', function () {
 Route::get('/artefact/product/{no}', 'ProductController@show');
 
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/', function () {
+    return view('dashboard');
+});
 
+Route::get('/login', 'TraiteLogin@traitelogin');
+Route::post('/login', 'TraiteLogin@traitelogin');
 
-Route::get('/login', 'TraiteLogin@traitelogin')->name('login');
-Route::post('/login', 'TraiteLogin@traitelogin')->name('login');
-
-Route::get('/register', 'TraiteRegister@traiteregister')->name('register');
-Route::post('/register', 'TraiteRegister@traiteregister')->name('register');
+Route::get('/register', 'TraiteRegister@traiteregister');
+Route::post('/register', 'TraiteRegister@traiteregister');
 //Route::get('register', 'PersonController@store')->name('register');
 //Route::post('register', 'PersonController@store')->name('register');
