@@ -14,3 +14,7 @@ margin:auto;
 #productSearch{
     width: 30%;
 }
+.card{
+    display: flex;
+
+}

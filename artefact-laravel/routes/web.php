@@ -19,6 +19,9 @@ Route::get('/artefact', function () {
 Route::redirect('/', '/login');
 
 
+Route::get('/artefact/product/{no}', 'ProductController@show');
+
+
 Route::get('/home', 'HomeController@index')->name('home');
 
 

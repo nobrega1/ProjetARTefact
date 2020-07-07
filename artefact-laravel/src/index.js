@@ -19,8 +19,7 @@ products.fetch({reset:true,success:()=>{
     let p=products.models;
  
 
-    //todo loop or filter
-    console.log(products.at(0).get('editions') .filter(edition=>edition.no==1) );
+   
 }});
 
 
