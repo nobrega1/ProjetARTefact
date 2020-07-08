@@ -149,7 +149,7 @@
                   Modifier les information du compte
                 </button>
               </form>
-              <form action="html/changePW.html">
+              <form method="Get" action="{{ url('changePW') }}">
                 <button type="submit" class="btn btn-default btn-lg" id="back">
                   Changer le mot de passe
                 </button>
