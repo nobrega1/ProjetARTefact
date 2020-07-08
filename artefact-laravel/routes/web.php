@@ -17,7 +17,9 @@ Route::get('/', function () {
     return view('acceuil');
 });
 
-
+Route::get('/dashboard', function () {
+    return view('dashboard');
+});
 
 Route::get('/artefact/product/{no}', 'ProductController@show');
 
@@ -29,3 +31,6 @@ Route::post('/login', 'TraiteLogin@traitelogin');
 Route::get('/register', 'TraiteRegister@traiteregister');
 Route::post('/register', 'TraiteRegister@traiteregister');
 
+
+
+Route::get('/changePW', 'ChangePW@redirectpage');
