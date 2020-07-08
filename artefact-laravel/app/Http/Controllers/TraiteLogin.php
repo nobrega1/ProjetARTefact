@@ -26,11 +26,5 @@ class TraiteLogin extends Controller
         } else {
             return view('acceuil');
         }
-/*
-        if(isset($PersonMail) && $Person){
-            return view('dashboard');
-        }else{
-            return view('acceuil');
-        }*/
     }
 }
