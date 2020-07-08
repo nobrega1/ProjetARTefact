@@ -22,6 +22,7 @@ class TraiteLogin extends Controller
 
 
         if(Hash::check($password, $PersonMail->password)){
+            $request->session()->put('id',$PersonMail->id);
             return view('dashboard');
         } else {
             return view('acceuil');

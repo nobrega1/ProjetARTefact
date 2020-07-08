@@ -18,7 +18,7 @@ class TraiteRegister extends Controller
 
        if($password === $passwordconfirm){
 
-        Person::create([
+        $Person = Person::create([
             'addressno' => rand(1,2),
             'name' => $name ,
             'firstname' => $firstname,
@@ -26,8 +26,8 @@ class TraiteRegister extends Controller
             'password' => Hash::make( $password),
             'isactive' => 1,
         ]);
-
-            return redirect('/');
+            $request->session()->put('id',$Person->id);
+            return view('dashboard');
         }else{
             return view('acceuil');
 }
