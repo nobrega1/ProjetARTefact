@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Person;
 use App\Http\Requests\LoginRequest;
+use Illuminate\Support\Facades\Hash;
 
 class TraiteLogin extends Controller
 {
@@ -13,15 +14,23 @@ class TraiteLogin extends Controller
         $email = $request->input('email');
         $password = $request->input('password');
 
-        
+
+            
+
         $PersonMail = Person::where('email', $email )->first();
-      //  $PersonPass = Person::where('password', $password )->first();
+     //   $PersonPass = Person::where('password', $password )->first();
 
 
-        if(isset($PersonMail)/* && isset($PersonPass)*/){
+        if(Hash::check($password, $PersonMail->password)){
+            return view('dashboard');
+        } else {
+            return view('acceuil');
+        }
+/*
+        if(isset($PersonMail) && $Person){
             return view('dashboard');
         }else{
             return view('acceuil');
-        }
+        }*/
     }
 }
