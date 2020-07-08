@@ -21,12 +21,11 @@ Route::get('/', function () {
 
 Route::get('/artefact/product/{no}', 'ProductController@show');
 
-
+Route::get('/logout', 'TraiteLogout@traitelogout');
 
 Route::get('/login', 'TraiteLogin@traitelogin');
 Route::post('/login', 'TraiteLogin@traitelogin');
 
 Route::get('/register', 'TraiteRegister@traiteregister');
 Route::post('/register', 'TraiteRegister@traiteregister');
-
 
