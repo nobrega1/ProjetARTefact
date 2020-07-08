@@ -7,8 +7,7 @@
 
 body {
     background-color: #FCFCFC;
-    font-family: FiraSans-Regular;
-}
+    font-family: 'Raleway', sans-serif;}
 
 header {
     background-color: #FCFCFC;
@@ -19,8 +18,7 @@ nav {
 
 .titrePage{
     color: #d29349;
-    font-family: FiraSans-Bold;
-}
+    font-family: 'Raleway', sans-serif;}
 
 nav > ul > li > a {
     color: #fcfcfc;
@@ -31,15 +29,14 @@ nav > ul > li > a:hover {
 }
 
 .nav-modal {
-    font-family: FiraSans-Regular;
-}
+    font-family: 'Raleway', sans-serif;}
 
 a.selected {
 
     color: #4f4e4f;
     text-decoration:none;
-    font-family: FiraSans-Bold;
-    pointer-events: none;
+    font-family: 'Raleway', sans-serif;
+        pointer-events: none;
 }
 
 .listeCategorie{
@@ -54,11 +51,9 @@ div.btn-compte button:hover {
     text-decoration:none;
     background-color: #d29349;
     color: #FCFCFC ;
-    font-family: FiraSans-Bold;
-}
+    font-family: 'Raleway', sans-serif;}
 
 div.btn-compte button a:hover {
     text-decoration:none;
     color: #FCFCFC ;
-    font-family: FiraSans-Bold;
-} 
+    font-family: 'Raleway', sans-serif;} 

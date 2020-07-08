@@ -19,7 +19,7 @@ Route::get('/', function () {
 
 
 
-Route::get('/artefact/product/{no}', 'ProductController@show');
+Route::get('/artefact/products/{no}', 'ProductController@show');
 
 
 Route::get('/', function () {

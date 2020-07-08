@@ -1,11 +1,11 @@
 
-   <div class="card col-sm-6" >
-  <img class="card-img-top" src="{{lienimage}}" alt="">
-  <div class="card-body text-right ">
-    <h5 class="card-title">{{brand.name}}</h5>
-    <p class="card-text">{{shortdescr}}</p>
-   <p class="card-text ">{{longdescr}}</p>
+   <div class="card col-sm-6"data-groups="{{shortdescr}}" >
+         <img class="card-img-top productimg" src="{{lienimage}}" alt="">
 
-    <a href="/artefact/product/{{no}}" class="btn btn-primary">Plus d'infos</a>
+  <div class="card-body  border-top">
+    <h5 class="card-title text-left">{{brand.name}}</h5>
+    <p class="card-text text-left">{{shortdescr}}</p>
+
+    <a href="/artefact/product/{{no}}" class="btn btn-primary float-right">Plus d'infos</a>
   </div>
 </div>
