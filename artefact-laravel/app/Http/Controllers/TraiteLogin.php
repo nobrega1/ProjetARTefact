@@ -16,7 +16,7 @@ class TraiteLogin extends Controller
         $PersonMail = Person::where('email', $email )->first();
         if(Hash::check($password, $PersonMail->password)){
             $request->session()->put('id',$PersonMail->id);
-            return view('dashboard');
+            return redirect('/dashboard');
         } else {
             return view('acceuil');
         }
