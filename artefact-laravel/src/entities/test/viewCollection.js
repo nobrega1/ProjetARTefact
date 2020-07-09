@@ -13,7 +13,6 @@ export default class extends ImView {
             for (let model of models){
                     let view = new View({model});
                     view.render().$el.appendTo(this.$el);
-                    console.log('loop');
             }
          
           return this;

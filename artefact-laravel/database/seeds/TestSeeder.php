@@ -27,7 +27,7 @@ class TestSeeder extends Seeder
                 'endtime' => $date,
                 'commentairestaff'=>'commentairestaff ' . $i ,
                 'stars' => rand(1,5),
-                'feedback'=>'feedback ' . $i ,
+                'feedback'=>Arr::random(['Super vélo, léger.','Peu maniable','Assise comfotable','Cadre trop petit']) ,
             ]);
         
         }
