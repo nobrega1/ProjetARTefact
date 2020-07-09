@@ -4,7 +4,7 @@ import Model from 'entities/compte/model';
 export default class extends ImCollection {
 
   url() {
-    return 'http://127.0.0.1:8000/api/persons/';
+    return 'http://pingouin1.heig-vd.ch/artefact/api/persons/';
   }
 
   model(attrs, options) {
