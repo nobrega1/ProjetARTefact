@@ -25,7 +25,7 @@
             <div class="row">
                 <div class="col-sm-4">
                     <div class="d-flex justify-content-center">
-                        <form action="../index.html#profile">
+                        <form action="/dashboard">
                         <button type="submit" class="btn btn-default btn-lg">Annuler</button>
                     </form>
                     </div>
@@ -40,21 +40,27 @@
             <!--Formulaire modification-->
             <div id="profile-list" class="row"></div>
                 <div class="container">
-                    <legend>Modifier les informations du compte</legend>
+                    <legend>Modifier le Mot de passe</legend>
 
-                    <form>
-                        <div class="form-group">
-                            <label for="inputName">Mot de passe actuelle *</label>
-                            <input type="name" class="form-control" id="inputName" placeholder="" required="">
+                    
+
+                    <form method="Get" action="{{ url('changePW') }}">
+                         <div class="form-group">
+                            <label for="inputemail">Email Actuel</label>
+                            <input type="email" class="form-control" id="email" placeholder="" required="">
                         </div>
                         <div class="form-group">
-                            <label for="inputFirstname">Nouveau mot de passe *</label>
-                            <input type="firstname" class="form-control" id="inputFirstname" placeholder=""
+                            <label for="inputpassword">Mot de passe actuelle *</label>
+                            <input type="password" class="form-control" id="password" placeholder="" required="">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputpasswordnew">Nouveau mot de passe *</label>
+                            <input type="password" class="form-control" id="passwordnew" placeholder=""
                                 required="">
                         </div>
                         <div class="form-group">
-                            <label for="inputEmail">Confirmer le nouveau mot de passe *</label>
-                            <input type="email" class="form-control" id="inputEmail" placeholder=""
+                            <label for="inputpasswordnewconf">Confirmer le nouveau mot de passe *</label>
+                            <input type="password" class="form-control" id="passwordnewconf" placeholder=""
                                 required="">
                         </div>
 

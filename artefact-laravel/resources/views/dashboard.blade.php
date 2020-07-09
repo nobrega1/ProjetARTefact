@@ -31,7 +31,8 @@
           <li><a href="#allProducts">Catalogue</a> </li>
           <li><a href="#allTests">Historique des tests</a> </li>
           <li><a href="#profile">Mon compte</a> </li>
-          <li><a href="/">logout</a></li>
+          <li><a href="{{ url('logout') }}">logout</a></li>
+          <li><p>{{ session('id') }}</p></li>
       </nav>
     </div>
     <div class="head">
@@ -102,7 +103,7 @@
                   Modifier les information du compte
                 </button>
               </form>
-              <form action="html/changePW.html">
+              <form method="Get" action="{{ url('changePW') }}">
                 <button type="submit" class="btn btn-default btn-lg" id="back">
                   Changer le mot de passe
                 </button>

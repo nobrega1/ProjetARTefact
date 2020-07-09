@@ -3,22 +3,22 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Person;
-use App\Http\Requests\LoginRequest;
-use Illuminate\Support\Facades\Hash;
 
-class TraiteLogin extends Controller
+class ChangePW extends Controller
 {
-    public function traitelogin(Request $request) {
-
+    public function redirectpage(Request $request) {
+        return view('changePW');
+    }
+    public function traitechangePW(Request $request) {
         $email = $request->input('email');
         $password = $request->input('password');
+        $passwordnew = $request->input('passwordnew');
         $PersonMail = Person::where('email', $email )->first();
         if(Hash::check($password, $PersonMail->password)){
-            $request->session()->put('id',$PersonMail->id);
+            $PersonMail->password = $passwordnew;
             return view('dashboard');
         } else {
-            return view('acceuil');
+            return view('changePW');
         }
     }
 }
