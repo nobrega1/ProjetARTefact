@@ -24,26 +24,29 @@
 <body>
 <header>
     <img class="btlogo" src="img/BikeTestLogo.svg">
-    <div class="nav-modal">
-      <div class="blob"></div>
-      <nav class="nav justify-content-center">
-        <ul>
-          <li><a href="#allProducts">Catalogue</a> </li>
+   
+<nav id="navbar"class="navbar navbar-inverse navbar-static-top" role="navigation">
+			<div class="container">
+         <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">
+        <li><a href="#allProducts">Catalogue</a> </li>
           <li><a href="#allTests">Historique des tests</a> </li>
           <li><a href="#profile">Mon compte</a> </li>
-          <li><a href="{{ url('logout') }}">logout</a></li>
-          <li><p>{{ session('id') }}</p></li>
-      </nav>
-    </div>
-    <div class="head">
-      <div class="tile burger">
-        <div class="meat">
-          <div class="line one"></div>
-          <div class="line two"></div>
-          <div class="line three"></div>
-          </div>
-        </div>
-      </div>
+          <li><a href="{{ url('logout') }}">Déconnexion</a></li>
+				</ul>
+			</div>
+		</nav>
+  </div>
   </header>
 
   <main>
