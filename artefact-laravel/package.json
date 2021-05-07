@@ -50,6 +50,6 @@
     "handlebars": "^4.7.6",
     "multiple-select": "^1.5.2",
     "shufflejs": "^5.2.3",
-    "underscore": "^1.10.2"
+    "underscore": "^1.12.1"
   }
 }
